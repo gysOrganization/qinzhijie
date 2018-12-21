@@ -15,29 +15,28 @@ import lombok.EqualsAndHashCode;
 /**
  * 文章分类
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月27日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月27日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class Classification extends BaseTgEntity
-{
+@EqualsAndHashCode(callSuper = false)
+public class Classification extends BaseTgEntity {
 
-    private static final long serialVersionUID = 2441427198958139677L;
-    
-    /**分类名称**/
-    private String name;
-    
-    /**备注**/
-    private String remark; 
-    
-    /**父类Id**/
-    private Long parentId;
-    
-    /**排序**/
-    private Integer compositor;
+	private static final long serialVersionUID = 2441427198958139677L;
+
+	/** 分类名称 **/
+	private String name;
+
+	/** 备注 **/
+	private String remark;
+
+	/** 父类Id **/
+	private Long parentId;
+
+	/** 排序 **/
+	private Integer compositor;
 
 	public String getName() {
 		return name;

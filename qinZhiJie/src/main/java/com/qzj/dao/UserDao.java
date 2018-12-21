@@ -15,24 +15,22 @@ import com.qzj.dto.User;
 /**
  * 用户登录
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月27日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月27日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
-public interface UserDao
-{
-    void addUser(User user);
-    
-    int deleteUser(Long id);
-    
-    int updateUser(User user);
-    
-    int countUser(HashMap<String, Object> map);
-    
-    List<User>seletUserList(HashMap<String, Object> map);
-    
-    User userInfo(String username);
-    
-    
+public interface UserDao {
+	void addUser(User user);
+
+	int deleteUser(Long id);
+
+	int updateUser(User user);
+
+	int countUser(HashMap<String, Object> map);
+
+	List<User> seletUserList(HashMap<String, Object> map);
+
+	User userInfo(String username);
+
 }

@@ -15,26 +15,25 @@ import lombok.EqualsAndHashCode;
 /**
  * 友情链接
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月28日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月28日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class Interlinkage extends BaseTgEntity
-{
+@EqualsAndHashCode(callSuper = false)
+public class Interlinkage extends BaseTgEntity {
 
-    private static final long serialVersionUID = -5822973200733309741L;
-    
-    /**类型**/
-    private String type;
-    
-    /**名字**/
-    private String name;
-    
-    /**地址**/
-    private String url;
+	private static final long serialVersionUID = -5822973200733309741L;
+
+	/** 类型 **/
+	private String type;
+
+	/** 名字 **/
+	private String name;
+
+	/** 地址 **/
+	private String url;
 
 	public String getType() {
 		return type;

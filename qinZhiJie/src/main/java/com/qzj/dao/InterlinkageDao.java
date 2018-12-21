@@ -15,20 +15,19 @@ import com.qzj.dto.Interlinkage;
 /**
  * dao
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月28日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月28日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
-public interface InterlinkageDao
-{
-    void addLink(Interlinkage link);
-    
-    int deleteLink(Long id);
-    
-    int updateLink(Interlinkage link);
-    
-    List<Interlinkage>selectList(HashMap<String, Object> map);
-    
-    int countList(HashMap<String, Object> map);
+public interface InterlinkageDao {
+	void addLink(Interlinkage link);
+
+	int deleteLink(Long id);
+
+	int updateLink(Interlinkage link);
+
+	List<Interlinkage> selectList(HashMap<String, Object> map);
+
+	int countList(HashMap<String, Object> map);
 }

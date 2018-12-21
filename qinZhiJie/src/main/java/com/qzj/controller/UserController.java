@@ -17,55 +17,48 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qzj.dto.User;
 import com.qzj.util.ObjectUtil;
 
-
-
 /**
  * 用户接口
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月28日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月28日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 @CrossOrigin
 @RestController
 @RequestMapping("/user")
-public class UserController extends BaseTgController
-{
-    @RequestMapping("/add")
-    public Map<String, Object> addUser(@RequestBody Map<String,Object> request)
-    {
-        User user = ObjectUtil.parseMap2Object(request,User.class);
-        
-        return uservice.addUser(user);
-                
-    }
-    
-    @RequestMapping("/update")
-    public Map<String, Object> updateUser(@RequestBody Map<String,Object> request)
-    {
-        User user = ObjectUtil.parseMap2Object(request,User.class);
-        
-        return uservice.updateUser(user);
-                
-    }
-    
-    @RequestMapping("/delete")
-    public Map<String, Object> deleteUser(@RequestBody Map<String,Object> request)
-    {
-        Long id = request.get("id")==null?null:Long.parseLong(String.valueOf(request.get("id")));
-        
-        return uservice.deleteUser(id);
-                
-    }
-    
-    @RequestMapping("/login")
-    public Map<String, Object> login(@RequestBody Map<String,Object> request)
-    {
-        User user = ObjectUtil.parseMap2Object(request,User.class);
-        
-        return uservice.login(user);
-                
-    }
-    
+public class UserController extends BaseTgController {
+	@RequestMapping("/add")
+	public Map<String, Object> addUser(@RequestBody Map<String, Object> request) {
+		User user = ObjectUtil.parseMap2Object(request, User.class);
+
+		return uservice.addUser(user);
+
+	}
+
+	@RequestMapping("/update")
+	public Map<String, Object> updateUser(@RequestBody Map<String, Object> request) {
+		User user = ObjectUtil.parseMap2Object(request, User.class);
+
+		return uservice.updateUser(user);
+
+	}
+
+	@RequestMapping("/delete")
+	public Map<String, Object> deleteUser(@RequestBody Map<String, Object> request) {
+		Long id = request.get("id") == null ? null : Long.parseLong(String.valueOf(request.get("id")));
+
+		return uservice.deleteUser(id);
+
+	}
+
+	@RequestMapping("/login")
+	public Map<String, Object> login(@RequestBody Map<String, Object> request) {
+		User user = ObjectUtil.parseMap2Object(request, User.class);
+
+		return uservice.login(user);
+
+	}
+
 }

@@ -16,26 +16,24 @@ import com.qzj.service.InterlinkageService;
 import com.qzj.service.UserService;
 
 /**
- * <一句话功能简述>
- * <功能详细描述>
+ * <一句话功能简述> <功能详细描述>
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月28日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月28日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
-public class BaseTgController
-{
-    
-    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
-    
-    @Autowired
-    protected UserService uservice;
-    
-    @Autowired
-    protected ClassificationService classService;
-    
-    @Autowired
-    protected InterlinkageService linkService;
-    
+public class BaseTgController {
+
+	protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	protected UserService uservice;
+
+	@Autowired
+	protected ClassificationService classService;
+
+	@Autowired
+	protected InterlinkageService linkService;
+
 }

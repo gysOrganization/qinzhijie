@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.MemberDao">
+	<select id="getList" resultType="com.qzj.dto.Member"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_member 
+		where 1 = 1
+		 limit #{page.startIndex}, #{page.pageSize}
+	</select>
+</mapper>

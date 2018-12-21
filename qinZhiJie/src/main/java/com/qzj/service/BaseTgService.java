@@ -16,25 +16,23 @@ import com.qzj.dao.InterlinkageDao;
 import com.qzj.dao.UserDao;
 
 /**
- * <一句话功能简述>
- * <功能详细描述>
+ * <一句话功能简述> <功能详细描述>
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月27日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月27日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
-public class BaseTgService
-{
-    protected Logger logger = LoggerFactory.getLogger(this.getClass());
-    
-    @Autowired
-    protected ClassificationDao classDao;
-    
-    @Autowired
-    protected UserDao userDao;
-    
-    @Autowired
-    protected InterlinkageDao linkDao;
-    
+public class BaseTgService {
+	protected Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	protected ClassificationDao classDao;
+
+	@Autowired
+	protected UserDao userDao;
+
+	@Autowired
+	protected InterlinkageDao linkDao;
+
 }

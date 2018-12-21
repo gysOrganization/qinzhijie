@@ -15,23 +15,22 @@ import com.qzj.dto.Classification;
 /**
  * 分类dao
  * 
- * @author  Muffler7
- * @version  [版本号, 2018年10月27日]
- * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @author Muffler7
+ * @version [版本号, 2018年10月27日]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 
-public interface ClassificationDao
-{
-    
-     void addClassification(Classification c);
+public interface ClassificationDao {
 
-     int deleteClassification(Long id);
+	void addClassification(Classification c);
 
-     int updateById(Classification c);
-     
-     List<Classification>selectList(HashMap<String, Object> map);
-     
-     int countList(HashMap<String, Object> map);
-    
+	int deleteClassification(Long id);
+
+	int updateById(Classification c);
+
+	List<Classification> selectList(HashMap<String, Object> map);
+
+	int countList(HashMap<String, Object> map);
+
 }

@@ -4,10 +4,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class LoggerTest
-{
-    private String msg;
+@EqualsAndHashCode(callSuper = false)
+public class LoggerTest {
+	private String msg;
 
 	public String getMsg() {
 		return msg;
