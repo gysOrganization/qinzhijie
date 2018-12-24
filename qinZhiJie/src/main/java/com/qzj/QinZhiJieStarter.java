@@ -25,7 +25,7 @@ public class QinZhiJieStarter {
 	}
 
 	/** HTTP跳转HTTPS **/
-	@Bean
+/*	@Bean
 	public Connector connector() {
 		Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
 		connector.setScheme("http");
@@ -50,6 +50,6 @@ public class QinZhiJieStarter {
 		};
 		tomcat.addAdditionalTomcatConnectors(connector);
 		return tomcat;
-	}
+	}*/
 
 }

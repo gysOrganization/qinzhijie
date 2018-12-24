@@ -9,7 +9,7 @@ public class PageRequest {
 	private long startIndex;
 
 	public long getStartIndex() {
-		startIndex = (1 - currentPage) * pageSize;
+		startIndex = (currentPage-1) * pageSize;
 		return startIndex;
 	}
 

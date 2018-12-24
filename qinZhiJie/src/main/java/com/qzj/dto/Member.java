@@ -17,6 +17,8 @@ public class Member extends BaseTgEntity {
 	private String profile;
 
 	private String desc;
+	
+	
 
 	public String getType() {
 		return type;

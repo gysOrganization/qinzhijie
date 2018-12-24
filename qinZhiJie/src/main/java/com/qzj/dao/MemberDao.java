@@ -11,7 +11,9 @@ import com.qzj.dto.PageRequest;
 @Mapper
 public interface MemberDao {
 
-	List<Member> getList(@Param(value="page") PageRequest page);
+	public List<Member> getList(@Param(value="page") PageRequest page);
 	
-	long getTotal();
+	public long getTotal(@Param(value="page") PageRequest page);
+	
+	public long add(@Param(value="member") Member member);
 	}

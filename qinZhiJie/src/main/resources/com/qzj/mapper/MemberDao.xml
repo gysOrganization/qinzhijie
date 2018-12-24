@@ -3,8 +3,84 @@
 <mapper namespace="com.qzj.dao.MemberDao">
 	<select id="getList" resultType="com.qzj.dto.Member"
 		parameterType="com.qzj.dto.PageRequest">
-		select * from t_member 
+		select * from t_member
 		where 1 = 1
-		 limit #{page.startIndex}, #{page.pageSize}
+		limit
+		#{page.startIndex}, #{page.pageSize}
 	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_member
+		where 1 = 1
+	</select>
+
+	<insert id="add" parameterType="com.qzj.dto.Member">
+		insert into t_member(
+		<if test="member.type != null and member.type != ''">
+			`type`,
+		</if>
+		<if test="member.name != null and member.name != ''">
+			`name`,
+		</if>
+
+		<if test="member.pictureLink != null and member.pictureLink != ''">
+			pictureLink,
+		</if>
+
+		<if test="member.profile != null and member.profile != ''">
+			profile,
+		</if>
+
+		<if test="member.desc != null and member.desc != ''">
+			`desc`,
+		</if>
+
+		<if test="member.createBy != null and member.createBy != ''">
+			createBy,
+		</if>
+		<if test="member.createTime != null">
+			createTime,
+		</if>
+		<if test="member.updateTime != null">
+			updateTime,
+		</if>
+		<if test="member.updateBy != null and member.updateBy != ''">
+			updateBy
+		</if>
+		
+		)
+		values(
+		<if test="member.type != null and member.type != ''">
+			#{member.type,jdbcType=VARCHAR},
+		</if>
+		<if test="member.name != null and member.name != ''">
+			#{member.name,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.pictureLink != null and member.pictureLink != ''">
+			#{member.pictureLink,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.profile != null and member.profile != ''">
+			#{member.profile,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.desc != null and member.desc != ''">
+			#{member.desc,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.createBy != null and member.createBy != ''">
+			#{member.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="member.createTime != null">
+			#{member.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="member.updateTime != null">
+			#{member.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="member.updateBy != null and member.updateBy != ''">
+			#{member.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
 </mapper>
