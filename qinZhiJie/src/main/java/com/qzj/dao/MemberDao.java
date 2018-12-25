@@ -16,4 +16,8 @@ public interface MemberDao {
 	public long getTotal(@Param(value="page") PageRequest page);
 	
 	public long add(@Param(value="member") Member member);
+	
+	public long update(@Param(value="member") Member member);
+	
+	public long delete(@Param(value="list") List<String> list);
 	}

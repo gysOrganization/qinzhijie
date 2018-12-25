@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qzj.commos.vo.ResponseData;
@@ -42,6 +43,25 @@ public class MemberController extends BaseTgController {
 	public ResponseData<PageResult<Member>> add(@RequestBody Member member, HttpServletRequest request) {
 		ResponseData<PageResult<Member>> result = new ResponseData<PageResult<Member>>();
 		memberService.add(member);
+		result.setCode("200");
+		result.setMessage("Success");
+		return result;
+	}
+	
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public ResponseData<PageResult<Member>> update(@RequestBody Member member, HttpServletRequest request) {
+		ResponseData<PageResult<Member>> result = new ResponseData<PageResult<Member>>();
+		memberService.update(member);
+		result.setCode("200");
+		result.setMessage("Success");
+		return result;
+	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public ResponseData<PageResult<Member>> delete(@RequestParam String ids, HttpServletRequest request) {
+		ResponseData<PageResult<Member>> result = new ResponseData<PageResult<Member>>();
+		memberService.delete(ids);
 		result.setCode("200");
 		result.setMessage("Success");
 		return result;

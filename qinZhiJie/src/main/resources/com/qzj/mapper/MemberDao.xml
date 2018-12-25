@@ -83,4 +83,45 @@
 		</if>
 		)
 	</insert>
+	
+	<update id="update" parameterType="com.qzj.dto.Member">
+			update t_member set 
+		<if test="member.type != null and member.type != ''">
+			type = #{member.type,jdbcType=VARCHAR},
+		</if>
+		<if test="member.name != null and member.name != ''">
+			name = #{member.name,jdbcType=VARCHAR},
+		</if>
+		<if test="member.pictureLink != null and member.pictureLink != ''">
+			pictureLink = #{member.pictureLink,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.profile != null and member.profile != ''">
+			profile = #{member.profile,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.desc != null and member.desc != ''">
+			`desc` = #{member.desc,jdbcType=VARCHAR},
+		</if>
+
+		<if test="member.createBy != null and member.createBy != ''">
+			createBy = #{member.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="member.createTime != null">
+			createTime = #{member.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="member.updateTime != null">
+			updateTime = #{member.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="member.updateBy != null and member.updateBy != ''">
+			updateBy = #{member.updateBy,jdbcType=VARCHAR}
+		</if>
+		where id = #{member.id,jdbcType=VARCHAR}
+	</update>
+	<delete id="delete">
+		delete from t_member where id in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+                #{item}       
+        </foreach>   
+	</delete>
 </mapper>
