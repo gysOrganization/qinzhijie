@@ -25,3 +25,141 @@ to {[/member/add],methods=[POST]}: There is already 'articleController' bean met
 public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.ArticleController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest) mapped.
 [2018-12-25 14:43:28.496][restartedMain][WARN][org.springframework.context.support.AbstractApplicationContext][556]:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController': Unsatisfied dependency expressed through field 'uservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'classDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'classificationDao' defined in file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\dao\ClassificationDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\ArticleDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\ArticleDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.qzj.dao.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.qzj.dao.Article
 [2018-12-25 14:43:55.016][restartedMain][WARN][org.springframework.context.support.AbstractApplicationContext][556]:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController': Unsatisfied dependency expressed through field 'uservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'classDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'classificationDao' defined in file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\dao\ClassificationDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\ArticleDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\ArticleDao.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.qzj.dao.Article'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.qzj.dao.Article
+[2018-12-25 14:48:01.944][https-jsse-nio-20880-exec-6][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:03.132][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:08.460][https-jsse-nio-20880-exec-3][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14

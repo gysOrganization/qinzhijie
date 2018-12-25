@@ -2613,3 +2613,631 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.qzj.dao.Arti
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
 	... 24 more
+[2018-12-25 14:46:11.852][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][50]:Starting QinZhiJieStarter on DESKTOP-1BCMDRV with PID 7356 (C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes started by YuanSongGong in C:\gysgong\waikuai_git\qinzhijie\qinZhiJie)
+[2018-12-25 14:46:11.852][restartedMain][INFO][org.springframework.boot.SpringApplication][654]:No active profile set, falling back to default profiles: default
+[2018-12-25 14:46:11.930][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:46:11.930][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:46:15.743][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:46:15.743][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:46:15.770][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:46:15.796][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting service [Tomcat]
+[2018-12-25 14:46:15.797][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting Servlet Engine: Apache Tomcat/8.5.34
+[2018-12-25 14:46:15.816][localhost-startStop-1][INFO][org.apache.juli.logging.DirectJDKLog][180]:The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Java\jdk1.8.0_171\jre\bin;C:\gysgong\apache-maven-3.5.3\bin\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Users\YuanSongGong\AppData\Local\Microsoft\WindowsApps;;C:\gysgong\eclipse;;.]
+[2018-12-25 14:46:16.020][localhost-startStop-1][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing Spring embedded WebApplicationContext
+[2018-12-25 14:46:16.020][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 4090 ms
+[2018-12-25 14:46:16.020][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 4090 ms
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:46:16.208][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:46:16.223][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:46:16.223][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:46:16.223][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:46:16.223][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:46:16.488][restartedMain][INFO][com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure][56]:Init DruidDataSource
+[2018-12-25 14:46:17.278][restartedMain][INFO][com.alibaba.druid.pool.DruidDataSource][928]:{dataSource-1} inited
+[2018-12-25 14:46:17.974][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:17.974][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:18.397][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:46:18.397][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:46:18.409][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:46:18.409][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:46:18.563][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.563][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.565][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.565][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.567][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.567][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.568][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.568][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.572][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.588][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.601][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:46:18.601][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:46:18.603][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.603][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.606][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.606][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.609][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.609][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.610][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.610][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.613][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.613][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.615][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.615][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.619][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.619][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.622][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.622][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:46:18.625][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.625][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:46:18.625][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:46:18.625][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:46:18.687][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:18.687][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:18.687][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:18.687][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:46:18.727][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:46:18.727][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:46:18.728][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:46:18.728][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:46:19.301][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:46:19.301][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:46:19.372][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:46:19.372][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:46:19.377][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:46:19.377][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:46:19.379][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:46:19.379][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:46:19.387][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:46:19.387][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:46:19.389][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:46:19.389][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:46:19.404][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:46:19.912][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Using a shared selector for servlet write/read
+[2018-12-25 14:46:19.975][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:46:19.975][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:46:19.975][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][59]:Started QinZhiJieStarter in 8.765 seconds (JVM running for 10.299)
+[2018-12-25 14:46:38.231][https-jsse-nio-20880-exec-3][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2018-12-25 14:46:38.231][https-jsse-nio-20880-exec-3][INFO][org.springframework.web.servlet.FrameworkServlet][494]:FrameworkServlet 'dispatcherServlet': initialization started
+[2018-12-25 14:46:38.231][https-jsse-nio-20880-exec-3][INFO][org.springframework.web.servlet.FrameworkServlet][494]:FrameworkServlet 'dispatcherServlet': initialization started
+[2018-12-25 14:46:38.273][https-jsse-nio-20880-exec-3][INFO][org.springframework.web.servlet.FrameworkServlet][509]:FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+[2018-12-25 14:46:38.273][https-jsse-nio-20880-exec-3][INFO][org.springframework.web.servlet.FrameworkServlet][509]:FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+[2018-12-25 14:48:01.858][https-jsse-nio-20880-exec-6][INFO][org.springframework.beans.factory.xml.XmlBeanDefinitionReader][317]:Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[2018-12-25 14:48:01.858][https-jsse-nio-20880-exec-6][INFO][org.springframework.beans.factory.xml.XmlBeanDefinitionReader][317]:Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[2018-12-25 14:48:01.944][https-jsse-nio-20880-exec-6][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:01.944][https-jsse-nio-20880-exec-6][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:03.132][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:03.132][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:08.460][https-jsse-nio-20880-exec-3][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:48:08.460][https-jsse-nio-20880-exec-3][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+### The error may involve com.qzj.dao.ArticleDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_article(        articleType,            articleTitle,             articleKeyWord,             desc,             articleText,             createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc,
+		 
+
+		 
+			articleText,
+		 
+
+		 
+			createBy,
+		 
+		 
+			createTime,
+		 
+' at line 14
+[2018-12-25 14:49:41.928][Thread-6][INFO][org.springframework.context.support.AbstractApplicationContext][991]:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:41.928][Thread-6][INFO][org.springframework.context.support.AbstractApplicationContext][991]:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a4cc32: startup date [Tue Dec 25 14:46:11 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:41.941][Thread-6][INFO][org.springframework.jmx.export.MBeanExporter][451]:Unregistering JMX-exposed beans on shutdown
+[2018-12-25 14:49:41.941][Thread-6][INFO][org.springframework.jmx.export.MBeanExporter][451]:Unregistering JMX-exposed beans on shutdown
+[2018-12-25 14:49:41.941][Thread-6][INFO][org.springframework.jmx.support.MBeanRegistrationSupport][185]:Unregistering JMX-exposed beans
+[2018-12-25 14:49:41.941][Thread-6][INFO][org.springframework.jmx.support.MBeanRegistrationSupport][185]:Unregistering JMX-exposed beans
+[2018-12-25 14:49:41.972][Thread-6][INFO][com.alibaba.druid.pool.DruidDataSource][1823]:{dataSource-1} closed
+[2018-12-25 14:49:42.526][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][50]:Starting QinZhiJieStarter on DESKTOP-1BCMDRV with PID 7356 (C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes started by YuanSongGong in C:\gysgong\waikuai_git\qinzhijie\qinZhiJie)
+[2018-12-25 14:49:42.528][restartedMain][INFO][org.springframework.boot.SpringApplication][654]:No active profile set, falling back to default profiles: default
+[2018-12-25 14:49:42.534][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:42.534][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:43.588][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:49:43.588][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:49:43.602][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:49:43.602][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting service [Tomcat]
+[2018-12-25 14:49:43.602][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting Servlet Engine: Apache Tomcat/8.5.34
+[2018-12-25 14:49:43.664][localhost-startStop-1][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing Spring embedded WebApplicationContext
+[2018-12-25 14:49:43.664][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 1130 ms
+[2018-12-25 14:49:43.664][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 1130 ms
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:49:43.696][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:49:43.711][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:49:43.832][restartedMain][INFO][com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure][56]:Init DruidDataSource
+[2018-12-25 14:49:43.902][restartedMain][INFO][com.alibaba.druid.pool.DruidDataSource][928]:{dataSource-2} inited
+[2018-12-25 14:49:44.130][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.130][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.206][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:44.206][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:44.210][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:49:44.210][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:49:44.220][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.220][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.221][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.221][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.222][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.222][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.225][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.225][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.226][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.226][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.228][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.228][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.230][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.230][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.237][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.237][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.239][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.239][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.243][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.260][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.260][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.262][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.262][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.265][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.265][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.267][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.267][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.268][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.268][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:44.273][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.273][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:44.274][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:49:44.274][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:49:44.300][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.300][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.301][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.301][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:44.311][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:49:44.311][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:49:44.312][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:49:44.312][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:49:44.458][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:49:44.458][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:49:44.534][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:49:44.534][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:49:44.537][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:49:44.537][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:49:44.539][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:49:44.539][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:49:44.547][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:49:44.547][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:49:44.549][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:49:44.549][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:49:44.559][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:49:44.569][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Using a shared selector for servlet write/read
+[2018-12-25 14:49:44.581][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:49:44.581][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:49:44.588][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][59]:Started QinZhiJieStarter in 2.163 seconds (JVM running for 214.903)
+[2018-12-25 14:49:44.597][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][56]:Condition evaluation unchanged
+[2018-12-25 14:49:44.597][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][56]:Condition evaluation unchanged
+[2018-12-25 14:49:52.113][Thread-10][INFO][org.springframework.context.support.AbstractApplicationContext][991]:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:52.113][Thread-10][INFO][org.springframework.context.support.AbstractApplicationContext][991]:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75689da8: startup date [Tue Dec 25 14:49:42 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:52.131][Thread-10][INFO][org.springframework.jmx.export.MBeanExporter][451]:Unregistering JMX-exposed beans on shutdown
+[2018-12-25 14:49:52.131][Thread-10][INFO][org.springframework.jmx.export.MBeanExporter][451]:Unregistering JMX-exposed beans on shutdown
+[2018-12-25 14:49:52.131][Thread-10][INFO][org.springframework.jmx.support.MBeanRegistrationSupport][185]:Unregistering JMX-exposed beans
+[2018-12-25 14:49:52.131][Thread-10][INFO][org.springframework.jmx.support.MBeanRegistrationSupport][185]:Unregistering JMX-exposed beans
+[2018-12-25 14:49:52.131][Thread-10][INFO][com.alibaba.druid.pool.DruidDataSource][1823]:{dataSource-2} closed
+[2018-12-25 14:49:52.600][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][50]:Starting QinZhiJieStarter on DESKTOP-1BCMDRV with PID 7356 (C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes started by YuanSongGong in C:\gysgong\waikuai_git\qinzhijie\qinZhiJie)
+[2018-12-25 14:49:52.600][restartedMain][INFO][org.springframework.boot.SpringApplication][654]:No active profile set, falling back to default profiles: default
+[2018-12-25 14:49:52.600][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c6e6f66: startup date [Tue Dec 25 14:49:52 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:52.600][restartedMain][INFO][org.springframework.context.support.AbstractApplicationContext][588]:Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c6e6f66: startup date [Tue Dec 25 14:49:52 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:53.548][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:49:53.548][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][91]:Tomcat initialized with port(s): 20880 (https)
+[2018-12-25 14:49:53.557][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:49:53.557][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting service [Tomcat]
+[2018-12-25 14:49:53.557][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting Servlet Engine: Apache Tomcat/8.5.34
+[2018-12-25 14:49:53.604][localhost-startStop-1][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing Spring embedded WebApplicationContext
+[2018-12-25 14:49:53.605][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 1005 ms
+[2018-12-25 14:49:53.605][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][285]:Root WebApplicationContext: initialization completed in 1005 ms
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet dispatcherServlet mapped to [/]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.ServletRegistrationBean][187]:Servlet statViewServlet mapped to [/druid/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][245]:Mapping filter: 'requestContextFilter' to: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:49:53.629][localhost-startStop-1][INFO][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean][258]:Mapping filter: 'webStatFilter' to urls: [/*]
+[2018-12-25 14:49:53.707][restartedMain][INFO][com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure][56]:Init DruidDataSource
+[2018-12-25 14:49:53.792][restartedMain][INFO][com.alibaba.druid.pool.DruidDataSource][928]:{dataSource-3} inited
+[2018-12-25 14:49:53.975][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:53.975][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:54.053][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c6e6f66: startup date [Tue Dec 25 14:49:52 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:54.053][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][588]:Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c6e6f66: startup date [Tue Dec 25 14:49:52 CST 2018]; root of context hierarchy
+[2018-12-25 14:49:54.053][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:49:54.053][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter][624]:Detected ResponseBodyAdvice bean in resultWrapper
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.add(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.update(com.qzj.dto.Article,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/article/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Article>> com.qzj.controller.ArticleController.getList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/add]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.add(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/update]}" onto public com.qzj.dto.Classification com.qzj.controller.ClassificationController.update(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.ClassificationController.delete(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlist]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlist(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/classification/getlistbyparam]}" onto public java.util.List<com.qzj.dto.Classification> com.qzj.controller.ClassificationController.getlistByParam(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.069][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.updateLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.deleteLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/getlist]}" onto public java.util.List<com.qzj.dto.Interlinkage> com.qzj.controller.InterlinkageController.selectList(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/link/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.InterlinkageController.addLink(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/logger/x]}" onto public com.qzj.dto.LoggerTest com.qzj.controller.LoggerController.xslsheet()
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/add],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.add(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/update],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.update(com.qzj.dto.Member,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/delete],methods=[GET]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.delete(java.lang.String,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/member/getList],methods=[POST]}" onto public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Member>> com.qzj.controller.MemberController.memberList(com.qzj.dto.PageRequest,javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/add]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.addUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/update]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.updateUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.085][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/delete]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.deleteUser(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/user/login]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.qzj.controller.UserController.login(java.util.Map<java.lang.String, java.lang.Object>)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:49:54.100][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry][549]:Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2018-12-25 14:49:54.147][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:54.147][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:54.147][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:54.147][restartedMain][INFO][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping][373]:Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2018-12-25 14:49:54.163][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:49:54.163][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][288]:Detected @ExceptionHandler methods in exceptionResolver
+[2018-12-25 14:49:54.163][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:49:54.163][restartedMain][INFO][org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver][294]:Detected ResponseBodyAdvice implementation in resultWrapper
+[2018-12-25 14:49:54.262][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:49:54.262][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer][57]:LiveReload server is running on port 35729
+[2018-12-25 14:49:54.302][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:49:54.302][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][433]:Registering beans for JMX exposure on startup
+[2018-12-25 14:49:54.304][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:49:54.304][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'statFilter' has been autodetected for JMX exposure
+[2018-12-25 14:49:54.305][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:49:54.305][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][895]:Bean with name 'dataSource' has been autodetected for JMX exposure
+[2018-12-25 14:49:54.310][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:49:54.310][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+[2018-12-25 14:49:54.313][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:49:54.313][restartedMain][INFO][org.springframework.jmx.export.MBeanExporter][668]:Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+[2018-12-25 14:49:54.322][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Starting ProtocolHandler ["https-jsse-nio-20880"]
+[2018-12-25 14:49:54.332][restartedMain][INFO][org.apache.juli.logging.DirectJDKLog][180]:Using a shared selector for servlet write/read
+[2018-12-25 14:49:54.347][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:49:54.347][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][206]:Tomcat started on port(s): 20880 (https) with context path ''
+[2018-12-25 14:49:54.347][restartedMain][INFO][org.springframework.boot.StartupInfoLogger][59]:Started QinZhiJieStarter in 1.825 seconds (JVM running for 224.664)
+[2018-12-25 14:49:54.347][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][56]:Condition evaluation unchanged
+[2018-12-25 14:49:54.347][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener][56]:Condition evaluation unchanged
+[2018-12-25 14:51:08.625][https-jsse-nio-20880-exec-5][INFO][org.apache.juli.logging.DirectJDKLog][180]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2018-12-25 14:51:08.625][https-jsse-nio-20880-exec-5][INFO][org.springframework.web.servlet.FrameworkServlet][494]:FrameworkServlet 'dispatcherServlet': initialization started
+[2018-12-25 14:51:08.625][https-jsse-nio-20880-exec-5][INFO][org.springframework.web.servlet.FrameworkServlet][494]:FrameworkServlet 'dispatcherServlet': initialization started
+[2018-12-25 14:51:08.632][https-jsse-nio-20880-exec-5][INFO][org.springframework.web.servlet.FrameworkServlet][509]:FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
+[2018-12-25 14:51:08.632][https-jsse-nio-20880-exec-5][INFO][org.springframework.web.servlet.FrameworkServlet][509]:FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
