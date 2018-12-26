@@ -23,7 +23,7 @@ import com.qzj.service.PictureService;
  *
  */
 @RestController
-@RequestMapping("/picture")
+@RequestMapping("/bigPicture")
 public class PictureController extends BaseTgController {
 
 	
