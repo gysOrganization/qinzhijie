@@ -1,0 +1,221 @@
+[2018-12-26 11:26:49.373][restartedMain][WARN][org.springframework.context.support.AbstractApplicationContext][556]:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'upLoadPictureController' method 
+public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.BigPicture>> com.qzj.controller.UpLoadPictureController.add(com.qzj.dto.BigPicture,javax.servlet.http.HttpServletRequest)
+to {[/bigPicture/add],methods=[POST]}: There is already 'pictureController' bean method
+public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.BigPicture>> com.qzj.controller.PictureController.add(com.qzj.dto.BigPicture,javax.servlet.http.HttpServletRequest) mapped.
+[2018-12-26 15:36:07.377][https-jsse-nio-20880-exec-5][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.web.multipart.MultipartException: Current request is not a multipart request
+[2018-12-26 15:37:06.057][https-jsse-nio-20880-exec-8][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: java.lang.NullPointerException
+[2018-12-26 15:37:14.832][https-jsse-nio-20880-exec-7][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: java.lang.NullPointerException
+[2018-12-26 15:37:29.620][https-jsse-nio-20880-exec-10][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: java.lang.NullPointerException
+[2018-12-26 15:38:17.338][https-jsse-nio-20880-exec-5][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.web.multipart.MultipartException: Current request is not a multipart request
+[2018-12-26 15:38:29.617][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.web.multipart.MultipartException: Current request is not a multipart request
+[2018-12-26 16:14:40.302][restartedMain][WARN][org.springframework.context.support.AbstractApplicationContext][556]:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController': Unsatisfied dependency expressed through field 'uservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'classDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'classificationDao' defined in file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\dao\ClassificationDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\FileDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\FileDao.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.qzj.dao.ArticleDao.add
+[2018-12-26 16:16:43.064][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			fileType = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.pn' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        uuid,            path,            fileType,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        uuid = ?,            path = ?,,            fileType = ?,             `name` = ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			fileType = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.pn' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			fileType = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.pn' at line 33
+[2018-12-26 16:17:53.465][https-jsse-nio-20880-exec-2][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			`fileType` = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        uuid,            `path`,            `fileType`,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        uuid = ?,            `path` = ?,,            `fileType` = ?,             `name` = ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			`fileType` = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			`fileType` = 'image/png',
+		 
+
+		 
+			`name` = '????_20180509180333.' at line 33
+[2018-12-26 16:19:11.968][https-jsse-nio-20880-exec-1][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        uuid,            `path`,            `fileType`,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,,            ?,             ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+[2018-12-26 16:20:05.657][https-jsse-nio-20880-exec-3][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        `uuid`,            `path`,            `fileType`,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,,            ?,             ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+[2018-12-26 16:20:31.085][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        `uuid`,            `path`,            `fileType`,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,,            ?,             ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+[2018-12-26 16:27:21.167][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+### The error may involve com.qzj.dao.FileDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_file(        `uuid`,            `path`,            `fileType`,             `name`,            createBy,            createTime,            updateTime,            updateBy       )   values(        ?,            ?,,            ?,             ?,            ?,            ?,            ?,            ?       )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+		 
+		 
+			'image/png',
+		 
+
+		 
+			'????_20180509180333.png',
+		 
+		 
+			'sys'' at line 33
+[2018-12-26 16:52:06.489][https-jsse-nio-20880-exec-5][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceClosedException: dataSource already closed at Wed Dec 26 16:52:05 CST 2018
+### The error may exist in file [C:\gysgong\waikuai_git\qinzhijie\qinZhiJie\target\classes\com\qzj\mapper\FileDao.xml]
+### The error may involve com.qzj.dao.FileDao.getByUuid
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceClosedException: dataSource already closed at Wed Dec 26 16:52:05 CST 2018

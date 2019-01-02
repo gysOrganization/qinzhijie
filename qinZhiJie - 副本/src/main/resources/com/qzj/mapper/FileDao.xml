@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.FileDao">
+	<select id="getByUuid" resultType="com.qzj.dto.FileBean"
+		parameterType="java.lang.String">
+		select * from t_file
+		where 1 = 1
+		and
+		uuid =
+		#{uuid,jdbcType=VARCHAR}
+	</select>
+
+	<insert id="add" parameterType="com.qzj.dto.FileBean">
+		insert into t_file(
+		<if test="fileBean.uuid != null and fileBean.uuid != ''">
+			`uuid`,
+		</if>
+		<if test="fileBean.path != null and fileBean.path != ''">
+			`path`,
+		</if>
+		<if test="fileBean.fileType != null and fileBean.fileType != ''">
+			`fileType`,
+		</if>
+
+		<if test="fileBean.name != null and fileBean.name != ''">
+			`name`,
+		</if>
+		<if test="fileBean.createBy != null and fileBean.createBy != ''">
+			createBy,
+		</if>
+		<if test="fileBean.createTime != null">
+			createTime,
+		</if>
+		<if test="fileBean.updateTime != null">
+			updateTime,
+		</if>
+		<if test="fileBean.updateBy != null and fileBean.updateBy != ''">
+			updateBy
+		</if>
+		)
+		values(
+		<if test="fileBean.uuid != null and fileBean.uuid != ''">
+			#{fileBean.uuid,jdbcType=VARCHAR},
+		</if>
+		<if test="fileBean.path != null and fileBean.path != ''">
+			#{fileBean.path,jdbcType=VARCHAR},
+		</if>
+		<if test="fileBean.fileType != null and fileBean.fileType != ''">
+			#{fileBean.fileType,jdbcType=VARCHAR},
+		</if>
+
+		<if test="fileBean.name != null and fileBean.name != ''">
+			#{fileBean.name,jdbcType=VARCHAR},
+		</if>
+		<if test="fileBean.createBy != null and fileBean.createBy != ''">
+			#{fileBean.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="fileBean.createTime != null">
+			#{fileBean.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fileBean.updateTime != null">
+			#{fileBean.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fileBean.updateBy != null and fileBean.updateBy != ''">
+			#{fileBean.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+
+	<delete id="delete">
+		delete from t_file where uuid in
+		<foreach collection="list" index="index" item="item" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+</mapper>
