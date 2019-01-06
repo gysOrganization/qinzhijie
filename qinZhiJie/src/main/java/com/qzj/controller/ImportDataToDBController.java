@@ -25,5 +25,17 @@ public class ImportDataToDBController {
 		return result;
 	}
 	
-	
+	//导入图片
+	@RequestMapping(value = "/ipmortMusicianPic", method = RequestMethod.POST)
+	public ResponseData<PageResult<String>> ipmortMusicianPic(){
+		ResponseData<PageResult<String>> result = new ResponseData<PageResult<String>>();
+		importMusican.ipmortMusicianPic1();
+		importMusican.ipmortMusicianPic2();
+		importMusican.ipmortMusicianPic3();
+		importMusican.ipmortMusicianPic4();
+		importMusican.ipmortMusicianPic5();
+		result.setCode("200");
+		result.setMessage("success");
+		return result;
+	}
 }

@@ -5,6 +5,50 @@
 		parameterType="com.qzj.dto.PageRequest">
 		select * from t_musician
 		where 1 = 1
+		<if test="page.queryObj.name != null and page.queryObj.name != ''">
+			and name = #{page.queryObj.name,jdbcType=VARCHAR} 
+		</if>
+		<if test="page.queryObj.picUrl1 != null and page.queryObj.picUrl1 != ''">
+			and name = #{page.queryObj.name,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl2 != null and page.queryObj.picUrl2 != ''">
+			and picUrl2 = #{page.queryObj.picUrl2,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl3 != null and page.queryObj.picUrl3 != ''">
+			and picUrl3 = #{page.queryObj.picUrl3,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl4 != null and page.queryObj.picUrl4 != ''">
+			and picUrl4 = #{page.queryObj.picUrl4,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl5 != null and page.queryObj.picUrl5 != ''">
+			and picUrl5 = #{page.queryObj.picUrl5,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl6 != null and page.queryObj.picUrl6 != ''">
+			and picUrl6 = #{page.queryObj.picUrl6,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl7 != null and page.queryObj.picUrl7 != ''">
+			and picUrl7 = #{page.queryObj.picUrl7,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl8 != null and page.queryObj.picUrl8 != ''">
+			and picUrl8 = #{page.queryObj.picUrl8,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.picUrl9 != null and page.queryObj.picUrl9 != ''">
+			and picUrl9 = #{page.queryObj.picUrl9,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.descUrl != null and page.queryObj.descUrl != ''">
+			and descUrl = #{page.queryObj.descUrl,jdbcType=VARCHAR}
+		</if>
+
+		<if test="page.queryObj.desc != null and page.queryObj.desc != ''">
+			and desc = #{page.queryObj.desc,jdbcType=VARCHAR}
+		</if>
+
+		<if test="page.queryObj.createBy != null and page.queryObj.createBy != ''">
+			and createBy = #{page.queryObj.createBy,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.updateBy != null and page.queryObj.updateBy != ''">
+			and updateBy = #{page.queryObj.updateBy,jdbcType=VARCHAR}
+		</if>
 		limit
 		#{page.startIndex}, #{page.pageSize}
 	</select>
@@ -122,6 +166,61 @@
 		</if>
 		)
 	</insert>
+	<update id="update" parameterType="com.qzj.dto.Musician">
+		update t_musician set
+		<if test="item.name != null and item.name != ''">
+			`name` = #{item.name,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl1 != null and item.picUrl1 != ''">
+			picUrl1 = #{item.picUrl1,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl2 != null and item.picUrl2 != ''">
+			picUrl2 = #{item.picUrl2,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl3 != null and item.picUrl3 != ''">
+			picUrl3 = #{item.picUrl3,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl4 != null and item.picUrl4 != ''">
+			picUrl4 = #{item.picUrl4,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl5 != null and item.picUrl5 != ''">
+			picUrl5 = #{item.picUrl5,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl6 != null and item.picUrl6 != ''">
+			picUrl6 = #{item.picUrl6,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl7 != null and item.picUrl7 != ''">
+			picUrl7= #{item.picUrl7,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl8 != null and item.picUrl8 != ''">
+			picUrl8 = #{item.picUrl8,jdbcType=VARCHAR},
+		</if>
+		<if test="item.picUrl9 != null and item.picUrl9 != ''">
+			picUrl9 = #{item.picUrl9,jdbcType=VARCHAR},
+		</if>
+		<if test="item.descUrl != null and item.descUrl != ''">
+			descUrl = #{item.descUrl,jdbcType=VARCHAR},
+		</if>
+
+		<if test="item.desc != null and item.desc != ''">
+			`desc` = #{item.desc,jdbcType=VARCHAR},
+		</if>
+
+		<if test="item.createBy != null and item.createBy != ''">
+			createBy = #{item.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="item.createTime != null">
+			createTime = #{item.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="item.updateTime != null">
+			updateTime = #{item.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="item.updateBy != null and item.updateBy != ''">
+			updateBy = #{item.updateBy,jdbcType=VARCHAR}
+		</if>
+		where id = #{item.id,jdbcType=VARCHAR}
+	</update>
+
 	<delete id="delete">
 		delete from t_musician where id in
 		<foreach collection="list" index="index" item="item" open="("
