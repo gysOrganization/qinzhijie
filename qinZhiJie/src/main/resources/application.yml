@@ -21,7 +21,7 @@ spring:
     
   datasource:
     name: carutoo
-    url: jdbc:mysql://192.168.1.104:3306/qinzhijie?useSSL=false
+    url: jdbc:mysql://192.168.1.108:3306/qinzhijie?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
     druid:
