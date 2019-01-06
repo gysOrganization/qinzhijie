@@ -56,7 +56,7 @@ public class BaseTgEntity implements Serializable {
 
 	public void setCreateBy(String createBy) {
 		this.createBy = createBy;
-	}
+	} 
 
 	public String getUpdateBy() {
 		return updateBy;
