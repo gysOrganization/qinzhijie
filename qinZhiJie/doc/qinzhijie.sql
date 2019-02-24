@@ -184,8 +184,8 @@ insert  into `t_musician`(`id`,`name`,`picUrl1`,`picUrl2`,`picUrl3`,`picUrl4`,`p
 
 /*Table structure for table `t_musicofviolin` */
 
-DROP TABLE IF EXISTS `t_musicofviolin`;
 
+DROP TABLE IF EXISTS `t_musicofviolin`;
 CREATE TABLE `t_musicofviolin` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID（琴曲）',
   `name` varchar(500) DEFAULT NULL COMMENT '琴曲名称',
