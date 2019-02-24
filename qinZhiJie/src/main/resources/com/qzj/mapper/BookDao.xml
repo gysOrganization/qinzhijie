@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.BookDao">
+	<insert id="add" parameterType="com.qzj.dao.BookDao" useGeneratedKeys="true" keyProperty="id" keyColumn="id"> 
+		insert into t_book(
+		<if test="book.id != null">
+			id,
+		</if>
+		<if test="book.bookName != null and book.bookName != ''">
+			bookName,
+		</if>
+		<if test="book.year != null and book.year != ''">
+			year,
+		</if>
+
+		<if test="book.dynasty != null and book.dynasty != ''">
+			dynasty,
+		</if>
+
+		<if test="book.author != null and book.author != ''">
+			author,
+		</if>
+
+		<if test="book.dirPath != null and book.dirPath != ''">
+			dirPath,
+		</if>
+
+		<if test="book.createBy != null and book.createBy != ''">
+			createBy,
+		</if>
+		<if test="book.createTime != null">
+			createTime,
+		</if>
+		<if test="book.updateTime != null">
+			updateTime,
+		</if>
+		<if test="book.updateBy != null and book.updateBy != ''">
+			updateBy
+		</if>
+		)
+		values(
+		
+		<if test="book.id != null">
+			#{book.id},
+		</if>
+		<if test="book.bookName != null and book.bookName != ''">
+			#{book.bookName,jdbcType=VARCHAR},
+		</if>
+		<if test="book.year != null and book.year != ''">
+			#{book.year,jdbcType=VARCHAR},
+		</if>
+		<if test="book.dynasty != null and book.dynasty != ''">
+			#{book.dynasty,jdbcType=VARCHAR},
+		</if>
+		<if test="book.author != null and book.author != ''">
+			#{book.author,jdbcType=VARCHAR},
+		</if>
+		<if test="book.dirPath != null and book.dirPath != ''">
+			#{book.dirPath,jdbcType=VARCHAR},
+		</if>
+		<if test="book.createBy != null and book.createBy != ''">
+			#{book.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="book.createTime != null">
+			#{book.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="book.updateTime != null">
+			#{book.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="book.updateBy != null and book.updateBy != ''">
+			#{book.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+	
+	<select id="selectList" resultType="com.qzj.dto.Book"
+		parameterType="java.util.HashMap">
+		select * from t_book where 1=1
+		<if test="bookName != null and bookName != ''">
+			 and bookName = #{bookName}
+		</if>
+	</select>
+	
+	<select id="selectMaxId" resultType="Integer">
+		SELECT IFNULL(MAX(id),0) FROM t_book;
+	</select>
+</mapper>

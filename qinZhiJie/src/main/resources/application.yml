@@ -21,7 +21,7 @@ spring:
     
   datasource:
     name: carutoo
-    url: jdbc:mysql://192.168.1.108:3306/qinzhijie?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/qinzhijie?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
     druid:
@@ -57,3 +57,5 @@ system-params:
   port: 8080
   
 uploadDir: C:\gysgong\waikuai_git\file\test
+
+basePath: G:\工作2019\

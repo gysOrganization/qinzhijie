@@ -36,8 +36,6 @@ public class FileController extends BaseTgController {
 		fileService.download(uuid, response);
 	}
 
-	//TODO
-	//还有一个中文乱码的问题，后面解决
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public ResponseData<PageResult<String>> upload(@RequestParam(value = "file") MultipartFile file,
 			HttpServletRequest request) {
