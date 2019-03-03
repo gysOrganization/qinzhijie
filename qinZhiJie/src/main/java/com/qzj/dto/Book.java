@@ -19,6 +19,16 @@ public class Book extends BaseTgEntity{
 	
 	private String dirPath;
 
+	private Integer orderNum;
+	
+	public Integer getOrderNum() {
+		return orderNum;
+	}
+
+	public void setOrderNum(Integer orderNum) {
+		this.orderNum = orderNum;
+	}
+
 	public String getBookName() {
 		return bookName;
 	}

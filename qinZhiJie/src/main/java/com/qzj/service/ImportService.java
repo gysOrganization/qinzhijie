@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +24,7 @@ import com.qzj.dto.Book;
 import com.qzj.dto.BookDetail;
 import com.qzj.dto.Musician;
 import com.qzj.dto.PageRequest;
+import com.qzj.util.ImportExcel;
 
 @Service
 public class ImportService {
@@ -348,10 +350,224 @@ public class ImportService {
 		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\碣石调幽兰");
 		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\清湖琴谱");
 		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\媛媛");
+		
+		
 		for(String path : list) {
 			ipmortBook(path);
 		}
 	}
+	
+	public void importBookAll1() {
+		List<String> list = new ArrayList<>();
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\08册   审核OK  成龙")
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\08册   审核OK  成龙\\1适琴  已审");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\08册   审核OK  成龙\\2松弦馆琴谱 已审");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\08册   审核OK  成龙\\3新传理怀元雅  已审");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\08册   审核OK  成龙\\4乐仙琴谱   已审");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\17第十七册");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\17第十七册");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\2十一絃館琴谱 已审核 上传 归类");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\3琴学摘要  已审核");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\4梅盦琴譜  已审核");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\5琴学管见  已审核");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\6琴学易知  已审核");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\7琴学秘诀  已审核");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\29第二十九册  已审核  成龙\\8沙堰琴编");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\太古正音琴经\\太古正音琴经");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\太古正音琴谱");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\永乐琴书集成二");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\永乐琴书集成三");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\永乐琴书集成四");
+		importBook1(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\永乐琴书集成一第二部分", "永乐琴书集成一");
+		importBook1(basePath + "01资料馆\\03历代琴谱\\02修图完成\\31\\永乐琴书集成一第一部分", "永乐琴书集成一");
+		
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\32第三十二册 琴史");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\33第三十三册 琴學");
+		importBook1(basePath + "01资料馆\\03历代琴谱\\02修图完成\\32第三十二册 琴史", "琴史");
+		importBook1(basePath + "01资料馆\\03历代琴谱\\02修图完成\\33第三十三册 琴學", "琴學");
+		
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\34第三十四册");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\35第三十五册");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\34第三十四册\\学海类编中的琴言十则及指法");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\35第三十五册");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\36第三十六册\\琴学汇成");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\36第三十六册\\琴学汇成\\1琴学汇成一");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\36第三十六册\\琴学汇成\\2琴学汇成二");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\36第三十六册\\琴学汇成\\3琴学汇成三");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\36第三十六册\\琴学汇成\\4琴学汇成四");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\37第三十七册");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\37第三十七册\\三馀斋琴铭");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\39第三十九册");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\39第三十九册\\琴翼");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\01白石道人诗词合集");
+		importBook2(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\02白石道人歌曲之古怨（张刻本）", "白石道人歌曲之古怨");
+		importBook2(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\03白石道人歌曲之古怨（榆园丛刻本）", "白石道人歌曲之古怨");
+		importBook2(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\04白石道人歌曲之古怨---江炳炎序（疆村丛书本）", "白石道人歌曲之古怨");
+		importBook2(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\05白石道人歌曲之古怨跋（疆村丛书本）", "白石道人歌曲之古怨");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\06太古遗音卷之一----斫琴");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\07太古遗音卷之一----琴制");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\08太古遗音卷之二----历代琴式");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\09太古遗音卷之三");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\09太古遗音卷之四");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\10太古遗音卷之五");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\修\\11龙湖琴谱");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\40第四十册琴府\\太古遗音注");
+		//TODO
+		//太乱了，暂时没有搞上去
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\古指法考---管平湖");
+		
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\碣石调幽兰");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\碣石调幽兰");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\清湖琴谱");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\清湖琴谱");
+		//特殊处理 list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\媛媛");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\媛媛\\琴苑要录");
+		list.add(basePath + "01资料馆\\03历代琴谱\\02修图完成\\媛媛\\与古斋琴谱");
+		for(String path : list) {
+			importBook1(path, null);
+		}
+	}
+
+	public void importBook2(String partPath, String bookName) {
+
+		
+		File f = new File(partPath);
+		Date date = new Date();
+		int maxId = bookDao.selectMaxId();
+		Book book = new Book();
+		book.setId(new Long(maxId + 1));
+		book.setBookName(bookName);
+		book.setDirPath(f.getAbsolutePath().replace(basePath, ""));
+		book.setUpdateBy(Constant.SYS_USER);
+		book.setCreateBy(Constant.SYS_USER);
+		book.setUpdateTime(date);
+		book.setCreateTime(date);
+		
+		HashMap<String, Object> m = new HashMap<>();
+		m.put("bookName", bookName);
+		List<Book> l = bookDao.selectList(m);
+		if(l != null && 0 != l.size()) {
+			book = l.get(0);
+		}else {
+			//插入book数据
+			bookDao.add(book);
+		}
+		
+		if(f.isDirectory()) {
+			String partName = partPath.substring(partPath.lastIndexOf("\\")+1, partPath.length()).replaceAll("\\d+","").trim();
+			BookDetail bookDetail = new BookDetail();
+			bookDetail.setBookId(book.getId().intValue());
+			bookDetail.setDirPath(f.getAbsolutePath().replace(basePath, ""));
+			bookDetail.setPartName(partName);
+			bookDetail.setOrderNum(getNumFromStr(partName));
+			bookDetail.setUpdateBy(Constant.SYS_USER);
+			bookDetail.setCreateBy(Constant.SYS_USER);
+			bookDetail.setUpdateTime(date);
+			bookDetail.setCreateTime(date);
+			try {
+				//插入bookDetail数据
+				bookDetailDao.add(bookDetail);
+			}catch(Exception e) {
+				//这个路径导入有误：
+				//01资料馆\\03历代琴谱\\02修图完成\\20第二十册\\4指法滙参确解\\53法滙参确解 ---绒৯法
+				System.out.println("这个路径导入有误：" + bookDetail.getDirPath());
+				e.printStackTrace();
+			}
+		}
+	
+		
+		
+	}
+	
+	
+	public void importBook1(String path, String bookName) {
+
+		File sub = new File(path);
+		
+		if(bookName == null) {
+			bookName = path.substring(path.lastIndexOf("\\")+1, path.length()).replaceAll("\\d+","").trim();
+		}
+		
+		Date date = new Date();
+		int maxId = bookDao.selectMaxId();
+		Book book = new Book();
+		book.setId(new Long(maxId + 1));
+		book.setBookName(bookName);
+		book.setDirPath(sub.getAbsolutePath().replace(basePath, ""));
+		book.setUpdateBy(Constant.SYS_USER);
+		book.setCreateBy(Constant.SYS_USER);
+		book.setUpdateTime(date);
+		book.setCreateTime(date);
+		
+		HashMap<String, Object> m = new HashMap<>();
+		m.put("bookName", bookName);
+		List<Book> l = bookDao.selectList(m);
+		if(l != null && 0 != l.size()) {
+			book = l.get(0);
+		}else {
+			//插入book数据
+			bookDao.add(book);
+		}
+		if(sub.isDirectory()) {
+			for(String partPath : sub.list()) {
+				File f = new File(path + "\\" + partPath);
+				if(f.isDirectory()) {
+					
+					String partName = "";
+					if(partPath.contains("-")) {
+						partName = partPath.substring(partPath.lastIndexOf("-") + 1, partPath.length()).trim();
+					}else {
+						partName = partPath.replaceAll("\\d", "");
+					}
+					//如果partName为空就用原来的
+					if(StringUtils.isBlank(partName)) {
+						partName = partPath.substring(partPath.lastIndexOf("-") + 1, partPath.length()).trim();
+					}
+					BookDetail bookDetail = new BookDetail();
+					bookDetail.setBookId(book.getId().intValue());
+					bookDetail.setDirPath(f.getAbsolutePath().replace(basePath, ""));
+					bookDetail.setPartName(partName);
+					bookDetail.setOrderNum(getNumFromStr(partPath));
+					bookDetail.setUpdateBy(Constant.SYS_USER);
+					bookDetail.setCreateBy(Constant.SYS_USER);
+					bookDetail.setUpdateTime(date);
+					bookDetail.setCreateTime(date);
+					try {
+						//插入bookDetail数据
+						bookDetailDao.add(bookDetail);
+					}catch(Exception e) {
+						//这个路径导入有误：
+						//01资料馆\\03历代琴谱\\02修图完成\\20第二十册\\4指法滙参确解\\53法滙参确解 ---绒৯法
+						System.out.println("这个路径导入有误：" + bookDetail.getDirPath());
+						e.printStackTrace();
+					}
+				}else if(f.isFile()) {
+					BookDetail bookDetail = new BookDetail();
+					bookDetail.setBookId(book.getId().intValue());
+					bookDetail.setDirPath(f.getAbsolutePath().replace(basePath, ""));
+					bookDetail.setPartName(partPath);
+					bookDetail.setOrderNum(-1);
+					bookDetail.setUpdateBy(Constant.SYS_USER);
+					bookDetail.setCreateBy(Constant.SYS_USER);
+					bookDetail.setUpdateTime(date);
+					bookDetail.setCreateTime(date);
+					try {
+						//插入bookDetail数据
+						bookDetailDao.add(bookDetail);
+					}catch(Exception e) {
+						//这个路径导入有误：
+						//01资料馆\\03历代琴谱\\02修图完成\\20第二十册\\4指法滙参确解\\53法滙参确解 ---绒৯法
+						System.out.println("这个路径导入有误：" + bookDetail.getDirPath());
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+	
 	
 	
 	
@@ -379,8 +595,16 @@ public class ImportService {
 			book.setCreateBy(Constant.SYS_USER);
 			book.setUpdateTime(date);
 			book.setCreateTime(date);
-			//插入book数据
-			bookDao.add(book);
+			
+			HashMap<String, Object> m = new HashMap<>();
+			m.put("bookName", bookName);
+			List<Book> l = bookDao.selectList(m);
+			if(l != null && 0 != l.size()) {
+				book = l.get(0);
+			}else {
+				//插入book数据
+				bookDao.add(book);
+			}
 			if(sub.isDirectory()) {
 				for(String partPath : sub.list()) {
 					File f = new File(path + "\\" + subPath + "\\" + partPath);
@@ -410,6 +634,25 @@ public class ImportService {
 							System.out.println("这个路径导入有误：" + bookDetail.getDirPath());
 							e.printStackTrace();
 						}
+					}else if(f.isFile()) {
+						BookDetail bookDetail = new BookDetail();
+						bookDetail.setBookId(book.getId().intValue());
+						bookDetail.setDirPath(f.getAbsolutePath().replace(basePath, ""));
+						bookDetail.setPartName(partPath);
+						bookDetail.setOrderNum(-1);
+						bookDetail.setUpdateBy(Constant.SYS_USER);
+						bookDetail.setCreateBy(Constant.SYS_USER);
+						bookDetail.setUpdateTime(date);
+						bookDetail.setCreateTime(date);
+						try {
+							//插入bookDetail数据
+							bookDetailDao.add(bookDetail);
+						}catch(Exception e) {
+							//这个路径导入有误：
+							//01资料馆\\03历代琴谱\\02修图完成\\20第二十册\\4指法滙参确解\\53法滙参确解 ---绒৯法
+							System.out.println("这个路径导入有误：" + bookDetail.getDirPath());
+							e.printStackTrace();
+						}
 					}
 				}
 			}
@@ -424,8 +667,49 @@ public class ImportService {
 		Pattern p = Pattern.compile(regEx);  
 		Matcher m = p.matcher(str); 
 		String returnStr = m.replaceAll("").trim();
-		return new Integer(StringUtils.isBlank(returnStr) ? "-1" : returnStr);
+		Integer returnNum = new Integer(StringUtils.isBlank(returnStr) ? "-1" : returnStr);
+		if(returnNum == 0) {
+			returnNum = -1;
 		}
+		return returnNum;
+		}
+	
+	//更新年代到历代琴谱上去
+	public void updateTimeTOBook(){
+		try {
+			String path = basePath + "01资料馆\\03历代琴谱\\时间轴.xlsx";
+			ImportExcel poi = new ImportExcel();
+			List<List<String>> list = poi.read(path);
+			HashMap<String, Object> m = new HashMap<>();
+			if (list != null) {
+				for (int i = 0; i < list.size(); i++) {
+					List<String> cellList = list.get(i);
+					String bookName = cellList.get(0);
+					String yearStr = cellList.get(1);
+					String dynasty = cellList.get(2);
+					String author = cellList.get(3);
+					m.put("bookName", bookName.trim());
+					List<Book> l = bookDao.selectList(m);
+					if(l != null && 0 != l.size()) {
+						Book book = l.get(0);
+						if(yearStr.contains(".0")) {
+							yearStr = yearStr.replaceAll(".0", "");
+						}
+						book.setYear(yearStr);
+						book.setDynasty(dynasty);
+						book.setAuthor(author);
+						book.setOrderNum(i);
+						book.setUpdateBy(Constant.SYS_USER);
+						book.setUpdateTime(new Date());
+						bookDao.update(book);
+				}
+			}
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static void main(String[] args) {
 	}

@@ -16,4 +16,6 @@ public interface BookDao {
 	List<Book> selectList(HashMap<String, Object> map);
 	
 	public Integer selectMaxId();
+	
+	public long update(@Param(value="book") Book book);
 }

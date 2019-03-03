@@ -44,6 +44,8 @@ public class ImportDataToDBController {
 	public ResponseData<PageResult<String>> ipmortBook(){
 		ResponseData<PageResult<String>> result = new ResponseData<PageResult<String>>();
 		importService.importBookAll();
+		importService.importBookAll1();
+		importService.updateTimeTOBook();
 		result.setCode("200");
 		result.setMessage("success");
 		return result;
