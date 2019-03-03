@@ -1,5 +1,7 @@
 package com.qzj.controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,5 +52,16 @@ public class ImportDataToDBController {
 		result.setMessage("success");
 		return result;
 	}
+	
+	//导入歌词到数据库
+	@RequestMapping(value = "/ipmortBookLyric", method = RequestMethod.POST)
+	public ResponseData<PageResult<String>> ipmortBookLyric() throws IOException{
+		ResponseData<PageResult<String>> result = new ResponseData<PageResult<String>>();
+		importService.ipmortBookLyric();
+		result.setCode("200");
+		result.setMessage("success");
+		return result;
+	}
+	
 	
 }
