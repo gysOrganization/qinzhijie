@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qzj.generator.mapper.BookMapper">
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.qzj.generator.model.Book">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+    <result column="year" jdbcType="VARCHAR" property="year" />
+    <result column="dynasty" jdbcType="VARCHAR" property="dynasty" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="dirPath" jdbcType="VARCHAR" property="dirpath" />
+    <result column="orderNum" jdbcType="INTEGER" property="ordernum" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="updateBy" jdbcType="VARCHAR" property="updateby" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bookName, year, dynasty, author, dirPath, orderNum, createTime, updateTime, createBy, 
+    updateBy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_book
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qzj.generator.model.Book">
+    insert into t_book (id, bookName, year, 
+      dynasty, author, dirPath, 
+      orderNum, createTime, updateTime, 
+      createBy, updateBy)
+    values (#{id,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{dynasty,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{dirpath,jdbcType=VARCHAR}, 
+      #{ordernum,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createby,jdbcType=VARCHAR}, #{updateby,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qzj.generator.model.Book">
+    insert into t_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bookname != null">
+        bookName,
+      </if>
+      <if test="year != null">
+        year,
+      </if>
+      <if test="dynasty != null">
+        dynasty,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="dirpath != null">
+        dirPath,
+      </if>
+      <if test="ordernum != null">
+        orderNum,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="updateby != null">
+        updateBy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null">
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    <set>
+      <if test="bookname != null">
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null">
+        year = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="dynasty != null">
+        dynasty = #{dynasty,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="dirpath != null">
+        dirPath = #{dirpath,jdbcType=VARCHAR},
+      </if>
+      <if test="ordernum != null">
+        orderNum = #{ordernum,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="updateby != null">
+        updateBy = #{updateby,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qzj.generator.model.Book">
+    update t_book
+    set bookName = #{bookname,jdbcType=VARCHAR},
+      year = #{year,jdbcType=VARCHAR},
+      dynasty = #{dynasty,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      dirPath = #{dirpath,jdbcType=VARCHAR},
+      orderNum = #{ordernum,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      createBy = #{createby,jdbcType=VARCHAR},
+      updateBy = #{updateby,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -2,6 +2,8 @@ package com.qzj.controller;
 
 import java.io.IOException;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,6 +15,11 @@ import com.qzj.service.ImportService;
 
 @RestController
 @RequestMapping("/ImportDataTo")
+/**
+ * 这个controller是导入数据到数据库使用的
+ * @author YuanSongGong
+ *
+ */
 public class ImportDataToDBController {
 
 	@Autowired
@@ -63,5 +70,14 @@ public class ImportDataToDBController {
 		return result;
 	}
 	
+	//导入指法到数据库
+	@RequestMapping(value = "/ipmortFingering", method = RequestMethod.POST)
+	public ResponseData<PageResult<String>> ipmortFingering() throws IOException{
+		ResponseData<PageResult<String>> result = new ResponseData<PageResult<String>>();
+		importService.ipmortFingering();
+		result.setCode("200");
+		result.setMessage("success");
+		return result;
+	}
 	
 }

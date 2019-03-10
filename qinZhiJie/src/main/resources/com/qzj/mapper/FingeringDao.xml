@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.FingeringDao">
+	<select id="getList" resultType="com.qzj.dto.Fingering"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_fingering
+		where 1 = 1
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_fingering
+		where 1 = 1
+	</select>
+
+	<insert id="add" parameterType="com.qzj.dto.Fingering">
+		insert into t_fingering(
+		<if test="fingering.name != null and fingering.name != ''">
+			name,
+		</if>
+		<if test="fingering.paintings != null and fingering.paintings != ''">
+			paintings,
+		</if>
+
+		<if test="fingering.desc != null and fingering.desc != ''">
+			`desc`,
+		</if>
+		
+		<if test="fingering.content != null and fingering.content != ''">
+			content,
+		</if>
+		<if test="fingering.fileUrl != null and fingering.fileUrl != ''">
+		    fileUrl,
+		</if>
+		<if test="fingering.createBy != null and fingering.createBy != ''">
+			createBy,
+		</if>
+		<if test="fingering.createTime != null">
+			createTime,
+		</if>
+		<if test="fingering.updateTime != null">
+			updateTime,
+		</if>
+		<if test="fingering.updateBy != null and fingering.updateBy != ''">
+			updateBy
+		</if>
+		)
+		values(
+		<if test="fingering.name != null and fingering.name != ''">
+			#{fingering.name,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.paintings != null and fingering.paintings != ''">
+			#{fingering.paintings,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.desc != null and fingering.desc != ''">
+			#{fingering.desc,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.content != null and fingering.content != ''">
+			#{fingering.content,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.fileUrl != null and fingering.fileUrl != ''">
+			#{fingering.fileUrl,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.createBy != null and fingering.createBy != ''">
+			#{fingering.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.createTime != null">
+			#{fingering.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fingering.updateTime != null">
+			#{fingering.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fingering.updateBy != null and fingering.updateBy != ''">
+			#{fingering.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.qzj.dto.Fingering">
+			update t_fingering set 
+		<if test="fingering.name != null and fingering.name != ''">
+			name = #{fingering.name,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.paintings != null and fingering.paintings != ''">
+			paintings = #{fingering.paintings,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.desc != null and fingering.desc != ''">
+			`desc` =  #{fingering.desc,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.content != null and fingering.content != ''">
+			content = #{fingering.content,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.fileUrl != null and fingering.fileUrl != ''">
+			fileUrl = #{fingering.fileUrl,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.createBy != null and fingering.createBy != ''">
+			createBy = #{fingering.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="fingering.createTime != null">
+			createTime = #{fingering.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fingering.updateTime != null">
+			updateTime = #{fingering.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="fingering.updateBy != null and fingering.updateBy != ''">
+			updateBy = #{fingering.updateBy,jdbcType=VARCHAR}
+		</if>
+		where id = #{fingering.id,jdbcType=VARCHAR}
+	</update>
+	<delete id="delete">
+		delete from t_fingering where id in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+                #{item}       
+        </foreach>
+	</delete>
+</mapper>

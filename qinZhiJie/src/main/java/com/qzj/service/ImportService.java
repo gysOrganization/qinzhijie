@@ -21,13 +21,16 @@ import com.qzj.commos.Constant;
 import com.qzj.dao.BookDao;
 import com.qzj.dao.BookDetailDao;
 import com.qzj.dao.BookLyricDao;
+import com.qzj.dao.FingeringDao;
 import com.qzj.dao.MusicianDao;
 import com.qzj.dto.Book;
 import com.qzj.dto.BookDetail;
 import com.qzj.dto.BookLyric;
+import com.qzj.dto.Fingering;
 import com.qzj.dto.Musician;
 import com.qzj.dto.PageRequest;
 import com.qzj.util.ImportExcel;
+import com.qzj.util.WordUtil;
 
 @Service
 public class ImportService {
@@ -40,9 +43,12 @@ public class ImportService {
 
 	@Autowired
 	private BookDetailDao bookDetailDao;
-	
+
 	@Autowired
 	private BookLyricDao bookLyricDao;
+
+	@Autowired
+	private FingeringDao fingeringDao;
 
 	@Value("${basePath}")
 	private String basePath;
@@ -729,7 +735,7 @@ public class ImportService {
 			ipmortBookLyric1("01资料馆\\02琴曲--歌词、解意\\22  二十二畫 已传", 22);
 			ipmortBookLyric1("01资料馆\\02琴曲--歌词、解意\\23  二十三畫 已传", 23);
 			ipmortBookLyric1("01资料馆\\02琴曲--歌词、解意\\30  三十畫 已传", 30);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -741,34 +747,83 @@ public class ImportService {
 			for (String subPath : f.list()) {
 				StringBuilder sb = new StringBuilder();
 				File sub = new File(basePath + path + "\\" + subPath);
-				if(sub.isFile() && f.exists()) {
+				if (sub.isFile() && f.exists()) {
 					InputStreamReader isr = new InputStreamReader(new FileInputStream(sub), "GBK");
 					BufferedReader br = new BufferedReader(isr);
-				      String lineTxt = null;
-				      while ((lineTxt = br.readLine()) != null) {
-				    	  sb.append(lineTxt);
-				      }
-				      br.close();
-				      String name = "";
-				      if(sb.length() != 0 && sb.toString().contains("曲名")) {
-				    	  String desc = sb.toString();
-				    	  System.out.println(sub.getAbsolutePath());
-				    	  name = desc.substring(desc.indexOf("：")+1, desc.indexOf("：", desc.indexOf("：")+1));
-				    	  name = name.replaceAll("時期", "").replaceAll("时期", "");
-				      }
-				      else {
-				    	  name = subPath.replace(".txt", "").replaceAll("ok", "").trim();
-				      }
-				      BookLyric bookLyric = new BookLyric();
-				      bookLyric.setMusicofviolin(name);
-				      bookLyric.setDesc(sb.toString());
-				      bookLyric.setStrokes(strokes);
-				      bookLyric.setUrl(path + "\\" + subPath);
-				      bookLyric.setUpdateBy(Constant.SYS_USER);
-				      bookLyric.setCreateBy(Constant.SYS_USER);
-				      bookLyric.setUpdateTime(date);
-				      bookLyric.setCreateTime(date);
-				      bookLyricDao.add(bookLyric);
+					String lineTxt = null;
+					while ((lineTxt = br.readLine()) != null) {
+						sb.append(lineTxt);
+					}
+					br.close();
+					String name = "";
+					if (sb.length() != 0 && sb.toString().contains("曲名")) {
+						String desc = sb.toString();
+						System.out.println(sub.getAbsolutePath());
+						name = desc.substring(desc.indexOf("：") + 1, desc.indexOf("：", desc.indexOf("：") + 1));
+						name = name.replaceAll("時期", "").replaceAll("时期", "");
+					} else {
+						name = subPath.replace(".txt", "").replaceAll("ok", "").trim();
+					}
+					BookLyric bookLyric = new BookLyric();
+					bookLyric.setMusicofviolin(name);
+					bookLyric.setDesc(sb.toString());
+					bookLyric.setStrokes(strokes);
+					bookLyric.setUrl(path + "\\" + subPath);
+					bookLyric.setUpdateBy(Constant.SYS_USER);
+					bookLyric.setCreateBy(Constant.SYS_USER);
+					bookLyric.setUpdateTime(date);
+					bookLyric.setCreateTime(date);
+					bookLyricDao.add(bookLyric);
+				}
+			}
+		}
+	}
+
+	public void ipmortFingering() throws IOException {
+
+		String path = "01资料馆\\02指法词典\\谱字释义";
+		File f = new File(basePath + path);
+		if (f != null && f.isDirectory()) {
+			Date date = new Date();
+			for (String subPath : f.list()) {
+				File sub = new File(basePath + path + "\\" + subPath);
+				if (f != null && f.isDirectory()) {
+					for (String subsubPath : sub.list()) {
+						if (!subsubPath.contains("$") && subsubPath.endsWith(".doc")) {
+							String url = basePath + path + "\\" + subPath + "\\" + subsubPath;
+							String content = "";
+							try {
+								content = WordUtil.readWord2003(url);
+							} catch (Exception e) {
+								content = WordUtil.readWord2007(url);
+							}
+							if(StringUtils.isBlank(content)) {
+								System.out.println("这个url：（" + url + "）读取有误");
+								continue;
+							}
+							String name = subsubPath.replace(".doc", "").replace("ok", "").replace(" 完", "").trim();
+							System.out.println(url);
+							while (true) {
+								if (content.contains("\"_blank\"")) {
+									content = content.replace(
+											content.substring(content.indexOf(""), content.indexOf("") + 1), "")
+											.replace("", "");
+								} else {
+									break;
+								}
+							}
+							Fingering fingering = new Fingering();
+							fingering.setName(name);
+							fingering.setContent(content.trim());
+							fingering.setFileUrl(path + "\\" + subPath + "\\" + subsubPath);
+							fingering.setPaintings(getNumFromStr(subPath));
+							fingering.setUpdateBy(Constant.SYS_USER);
+							fingering.setCreateBy(Constant.SYS_USER);
+							fingering.setUpdateTime(date);
+							fingering.setCreateTime(date);
+							fingeringDao.add(fingering);
+						}
+					}
 				}
 			}
 		}
