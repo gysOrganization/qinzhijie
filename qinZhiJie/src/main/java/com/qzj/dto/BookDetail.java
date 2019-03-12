@@ -11,11 +11,21 @@ public class BookDetail extends BaseTgEntity{
 
 	private Integer bookId;
 	
+	private String bookName;
+	
 	private String partName;
 	
 	private String dirPath;
 	
 	private Integer orderNum;
+
+	public String getBookName() {
+		return bookName;
+	}
+
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
 
 	public Integer getBookId() {
 		return bookId;

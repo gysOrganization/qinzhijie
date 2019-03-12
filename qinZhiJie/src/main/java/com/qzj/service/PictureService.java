@@ -22,6 +22,7 @@ public class PictureService extends BaseTgService {
 	
 	public PageResult<BigPicture> getList(PageRequest<BigPicture> page){
 		PageResult<BigPicture> pageResult = new PageResult<>();
+		pageResult.setPageSize(page.getPageSize());
 		pageResult.setDataList(bigPictureDao.getList(page));
 		pageResult.setTotal(bigPictureDao.getTotal(page));
 		return pageResult;

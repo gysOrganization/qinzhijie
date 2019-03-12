@@ -21,6 +21,7 @@ public class MemberService extends BaseTgService {
 	private MemberDao memberDao;
 	public PageResult<Member> getList(PageRequest<Member> page){
 		PageResult<Member> pageResult = new PageResult<>();
+		pageResult.setPageSize(page.getPageSize());
 		pageResult.setDataList(memberDao.getList(page));
 		pageResult.setTotal(memberDao.getTotal(page));
 		return pageResult;

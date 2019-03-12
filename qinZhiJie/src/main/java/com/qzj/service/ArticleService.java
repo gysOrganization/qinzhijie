@@ -21,6 +21,7 @@ public class ArticleService extends BaseTgService {
 	private ArticleDao articleDao;
 	public PageResult<Article> getList(PageRequest<Article> page){
 		PageResult<Article> pageResult = new PageResult<>();
+		pageResult.setPageSize(page.getPageSize());
 		pageResult.setDataList(articleDao.getList(page));
 		pageResult.setTotal(articleDao.getTotal(page));
 		return pageResult;

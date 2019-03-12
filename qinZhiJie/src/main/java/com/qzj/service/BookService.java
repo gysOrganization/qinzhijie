@@ -36,6 +36,7 @@ public class BookService extends BaseTgService {
 			page.setQueryObj(book);
 		}
 		PageResult<Book> pageResult = new PageResult<>();
+		pageResult.setPageSize(page.getPageSize());
 		pageResult.setDataList(bookDao.getList(page));
 		pageResult.setTotal(bookDao.getTotal(page));
 		return pageResult;

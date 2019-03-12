@@ -60,19 +60,20 @@
 	</insert>
 	<select id="getList" resultType="com.qzj.dto.BookDetail"
 		parameterType="com.qzj.dto.PageRequest">
-		select * from t_book_detail
-		where 1 = 1
+		SELECT tt.id, tt.bookId,t.bookName, tt.partName,tt.orderNum, tt.dirPath, tt.createBy,tt.createTime,tt.updateTime, tt.updateBy FROM t_book_detail tt
+		JOIN t_book t ON tt.bookId = t.id
+		WHERE 1 = 1
 		<if test="page.queryObj.id != null">
-			and id = #{page.queryObj.id}
+			and tt.id = #{page.queryObj.id}
 		</if>
 		<if test="page.queryObj.bookId != null">
-			and bookId = #{page.queryObj.bookId}
+			and tt.bookId = #{page.queryObj.bookId}
 		</if>
 		<if test="page.queryObj.partName != null and page.queryObj.partName != ''">
-			and partName like #{page.queryObj.partName,jdbcType=VARCHAR}
+			and tt.partName like #{page.queryObj.partName,jdbcType=VARCHAR}
 		</if>
 		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
-			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+			and tt.dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
 		</if>
 		limit
 		#{page.startIndex}, #{page.pageSize}

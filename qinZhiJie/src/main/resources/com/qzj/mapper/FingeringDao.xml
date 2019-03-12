@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.qzj.dao.FingeringDao">
-	<select id="getList" resultType="com.qzj.dto.Fingering"
-		parameterType="com.qzj.dto.PageRequest">
-		select * from t_fingering
-		where 1 = 1
-		limit
-		#{page.startIndex}, #{page.pageSize}
-	</select>
-	<select id="getTotal" resultType="java.lang.Long"
-		parameterType="com.qzj.dto.PageRequest">
-		select count(1) from t_fingering
-		where 1 = 1
-	</select>
-
 	<insert id="add" parameterType="com.qzj.dto.Fingering">
 		insert into t_fingering(
 		<if test="fingering.name != null and fingering.name != ''">
@@ -114,4 +101,52 @@
                 #{item}       
         </foreach>
 	</delete>
+	<select id="getList" resultType="com.qzj.dto.Fingering"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_fingering
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.name != null and page.queryObj.name != ''">
+			and name like #{page.queryObj.name,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.content != null and page.queryObj.content != ''">
+			and content like #{page.queryObj.content,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.desc != null and page.queryObj.desc != ''">
+			and `desc` like #{page.queryObj.desc,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.fileUrl != null and page.queryObj.fileUrl != ''">
+			and fileUrl like #{page.queryObj.fileUrl,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.paintings != null">
+			and paintings = #{page.queryObj.paintings}
+		</if>
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_fingering
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.name != null and page.queryObj.name != ''">
+			and name like #{page.queryObj.name,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.content != null and page.queryObj.content != ''">
+			and content like #{page.queryObj.content,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.desc != null and page.queryObj.desc != ''">
+			and `desc` like #{page.queryObj.desc,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.fileUrl != null and page.queryObj.fileUrl != ''">
+			and fileUrl like #{page.queryObj.fileUrl,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.paintings != null">
+			and paintings = #{page.queryObj.paintings}
+		</if>
+	</select>
 </mapper>
