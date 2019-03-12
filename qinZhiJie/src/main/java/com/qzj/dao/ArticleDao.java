@@ -11,9 +11,9 @@ import com.qzj.dto.PageRequest;
 @Mapper
 public interface ArticleDao {
 
-	public List<Article> getList(@Param(value="page") PageRequest page);
+	public List<Article> getList(@Param(value="page") PageRequest<Article> page);
 	
-	public long getTotal(@Param(value="page") PageRequest page);
+	public long getTotal(@Param(value="page") PageRequest<Article> page);
 	
 	public long add(@Param(value="article") Article Article);
 	

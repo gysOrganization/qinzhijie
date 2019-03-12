@@ -18,11 +18,11 @@ import com.qzj.dto.PageResult;
 public class ArticleService extends BaseTgService {
 
 	@Autowired
-	private ArticleDao ArticleDao;
-	public PageResult<Article> getList(PageRequest page){
+	private ArticleDao articleDao;
+	public PageResult<Article> getList(PageRequest<Article> page){
 		PageResult<Article> pageResult = new PageResult<>();
-		pageResult.setDataList(ArticleDao.getList(page));
-		pageResult.setTotal(ArticleDao.getTotal(page));
+		pageResult.setDataList(articleDao.getList(page));
+		pageResult.setTotal(articleDao.getTotal(page));
 		return pageResult;
 	}
 	
@@ -32,7 +32,7 @@ public class ArticleService extends BaseTgService {
 		Article.setCreateTime(date);
 		Article.setUpdateTime(date);
 		Article.setUpdateBy(Constant.SYS_USER);
-		ArticleDao.add(Article);
+		articleDao.add(Article);
 	}
 	
 	public void update(Article Article){
@@ -41,7 +41,7 @@ public class ArticleService extends BaseTgService {
 		}
 		Article.setUpdateTime(new Date());
 		Article.setUpdateBy(Constant.SYS_USER);
-		ArticleDao.update(Article);
+		articleDao.update(Article);
 	}
 	
 	public void delete(String ids){
@@ -50,6 +50,6 @@ public class ArticleService extends BaseTgService {
 		}
 		
 		List<String> list = Arrays.asList(ids.split(","));
-		ArticleDao.delete(list);
+		articleDao.delete(list);
 	}
 }

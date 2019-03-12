@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qzj.commos.vo.ResponseData;
-import com.qzj.dto.Book;
+import com.qzj.dto.BookDetail;
 import com.qzj.dto.PageRequest;
 import com.qzj.dto.PageResult;
-import com.qzj.service.BookService;
+import com.qzj.service.BookDetailService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/book")
-public class BookController extends BaseTgController {
+@RequestMapping("/bookDetail")
+public class BookDetailController extends BaseTgController {
 	
 	@Autowired
-	private BookService bookService;
+	private BookDetailService bookDetailService;
 
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
-	public ResponseData<PageResult<Book>> getList(@RequestBody PageRequest<Book> page, HttpServletRequest request) {
-		ResponseData<PageResult<Book>> result = new ResponseData<PageResult<Book>>();
-		result.setData(bookService.getList(page));
+	public ResponseData<PageResult<BookDetail>> getList(@RequestBody PageRequest<BookDetail> page, HttpServletRequest request) {
+		ResponseData<PageResult<BookDetail>> result = new ResponseData<PageResult<BookDetail>>();
+		result.setData(bookDetailService.getList(page));
 		result.setCode("200");
 		result.setMessage("Success");
 		return result;

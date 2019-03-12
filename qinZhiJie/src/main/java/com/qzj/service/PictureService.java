@@ -20,7 +20,7 @@ public class PictureService extends BaseTgService {
 	@Autowired
 	private BigPictureDao bigPictureDao;
 	
-	public PageResult<BigPicture> getList(PageRequest page){
+	public PageResult<BigPicture> getList(PageRequest<BigPicture> page){
 		PageResult<BigPicture> pageResult = new PageResult<>();
 		pageResult.setDataList(bigPictureDao.getList(page));
 		pageResult.setTotal(bigPictureDao.getTotal(page));

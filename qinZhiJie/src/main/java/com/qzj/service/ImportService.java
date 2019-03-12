@@ -91,7 +91,7 @@ public class ImportService {
 					musician.setName(f.getName().substring(0, f.getName().lastIndexOf(".")));
 
 					// 看当前这个人在数据库存在不
-					PageRequest page = new PageRequest();
+					PageRequest<Musician> page = new PageRequest<Musician>();
 					page.setQueryObj(musician);
 					List<Musician> list = musicianDao.getList(page);
 					if (list == null || list.size() == 0) {

@@ -31,7 +31,7 @@ public class MemberController extends BaseTgController {
 	private MemberService memberService;
 	
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
-	public ResponseData<PageResult<Member>> memberList(@RequestBody PageRequest page, HttpServletRequest request) {
+	public ResponseData<PageResult<Member>> memberList(@RequestBody PageRequest<Member> page, HttpServletRequest request) {
 		ResponseData<PageResult<Member>> result = new ResponseData<PageResult<Member>>();
 		result.setData(memberService.getList(page));
 		result.setCode("200");

@@ -1,13 +1,13 @@
 package com.qzj.dto;
 
-public class PageRequest {
+public class PageRequest<T> {
 
 	private long currentPage = 1;
 
 	private long pageSize = 20;
 
 	// 查询对象
-	private Object queryObj;
+	private T queryObj;
 
 	private long startIndex;
 
@@ -32,11 +32,11 @@ public class PageRequest {
 		this.pageSize = pageSize;
 	}
 
-	public Object getQueryObj() {
+	public T getQueryObj() {
 		return queryObj;
 	}
 
-	public void setQueryObj(Object queryObj) {
+	public void setQueryObj(T queryObj) {
 		this.queryObj = queryObj;
 	}
 }

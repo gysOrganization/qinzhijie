@@ -58,4 +58,40 @@
 		</if>
 		)
 	</insert>
+	<select id="getList" resultType="com.qzj.dto.BookDetail"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_book_detail
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookId != null">
+			and bookId = #{page.queryObj.bookId}
+		</if>
+		<if test="page.queryObj.partName != null and page.queryObj.partName != ''">
+			and partName like #{page.queryObj.partName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_book_detail
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookId != null">
+			and bookId = #{page.queryObj.bookId}
+		</if>
+		<if test="page.queryObj.partName != null and page.queryObj.partName != ''">
+			and partName like #{page.queryObj.partName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+	</select>
 </mapper>

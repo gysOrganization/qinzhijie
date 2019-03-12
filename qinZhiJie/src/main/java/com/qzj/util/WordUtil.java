@@ -51,6 +51,7 @@ public class WordUtil {
 		return text;
 	}
 
+	@SuppressWarnings("resource")
 	public static String readWord2007(String filePath) {
 
 		String text = null;

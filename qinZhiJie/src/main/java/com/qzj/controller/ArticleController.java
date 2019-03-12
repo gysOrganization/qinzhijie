@@ -31,7 +31,7 @@ public class ArticleController extends BaseTgController {
 	private ArticleService ArticleService;
 	
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
-	public ResponseData<PageResult<Article>> getList(@RequestBody PageRequest page, HttpServletRequest request) {
+	public ResponseData<PageResult<Article>> getList(@RequestBody PageRequest<Article> page, HttpServletRequest request) {
 		ResponseData<PageResult<Article>> result = new ResponseData<PageResult<Article>>();
 		result.setData(ArticleService.getList(page));
 		result.setCode("200");

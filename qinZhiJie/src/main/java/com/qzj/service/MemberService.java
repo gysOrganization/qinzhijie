@@ -19,7 +19,7 @@ public class MemberService extends BaseTgService {
 
 	@Autowired
 	private MemberDao memberDao;
-	public PageResult<Member> getList(PageRequest page){
+	public PageResult<Member> getList(PageRequest<Member> page){
 		PageResult<Member> pageResult = new PageResult<>();
 		pageResult.setDataList(memberDao.getList(page));
 		pageResult.setTotal(memberDao.getTotal(page));

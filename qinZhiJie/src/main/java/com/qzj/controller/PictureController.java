@@ -31,7 +31,7 @@ public class PictureController extends BaseTgController {
 	private PictureService pictureService;
 	
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
-	public ResponseData<PageResult<BigPicture>> getList(@RequestBody PageRequest page, HttpServletRequest request) {
+	public ResponseData<PageResult<BigPicture>> getList(@RequestBody PageRequest<BigPicture> page, HttpServletRequest request) {
 		ResponseData<PageResult<BigPicture>> result = new ResponseData<PageResult<BigPicture>>();
 		result.setData(pictureService.getList(page));
 		result.setCode("200");

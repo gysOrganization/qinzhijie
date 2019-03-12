@@ -113,5 +113,52 @@
 		</if>
 		where id = #{book.id,jdbcType=VARCHAR}
 	</update>
-	
+	<select id="getList" resultType="com.qzj.dto.Book"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_book
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookName != null and page.queryObj.bookName != ''">
+			and bookName like #{page.queryObj.bookName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.year != null and page.queryObj.year != ''">
+			and year like #{page.queryObj.year,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dynasty != null and page.queryObj.dynasty != ''">
+			and dynasty like #{page.queryObj.dynasty,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.author != null and page.queryObj.author != ''">
+			and author like #{page.queryObj.author,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_book
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookName != null and page.queryObj.bookName != ''">
+			and bookName like #{page.queryObj.bookName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.year != null and page.queryObj.year != ''">
+			and year like #{page.queryObj.year,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dynasty != null and page.queryObj.dynasty != ''">
+			and dynasty like #{page.queryObj.dynasty,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.author != null and page.queryObj.author != ''">
+			and author like #{page.queryObj.author,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+	</select>
 	</mapper>

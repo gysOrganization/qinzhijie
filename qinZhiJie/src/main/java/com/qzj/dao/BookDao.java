@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.qzj.dto.Book;
+import com.qzj.dto.PageRequest;
 
 @Mapper
 public interface BookDao {
@@ -15,7 +16,9 @@ public interface BookDao {
 	
 	List<Book> selectList(HashMap<String, Object> map);
 	
-	List<Book> selectListbyPage(HashMap<String, Object> map );
+	public List<Book> getList(@Param(value="page") PageRequest<Book> page);
+	
+	public long getTotal(@Param(value="page") PageRequest<Book> page);
 	
 	public Integer selectMaxId();
 	
