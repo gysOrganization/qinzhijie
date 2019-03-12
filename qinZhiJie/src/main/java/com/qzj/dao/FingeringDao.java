@@ -20,4 +20,6 @@ public interface FingeringDao {
 	public long update(@Param(value="fingering") Fingering fingering);
 	
 	public long delete(@Param(value="list") List<String> list);
+	
+	public List<String> getPaintings();
 	}

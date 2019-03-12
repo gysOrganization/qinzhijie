@@ -39,4 +39,10 @@ public class FingeringService extends BaseTgService {
 		pageResult.setTotal(fingeringDao.getTotal(page));
 		return pageResult;
 	}
+	
+	public PageResult<String> getPaintings(){
+		PageResult<String> pageResult = new PageResult<>();
+		pageResult.setDataList(fingeringDao.getPaintings());
+		return pageResult;
+	}
 }

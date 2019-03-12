@@ -123,6 +123,7 @@
 		<if test="page.queryObj.paintings != null">
 			and paintings = #{page.queryObj.paintings}
 		</if>
+		order by paintings asc
 		limit
 		#{page.startIndex}, #{page.pageSize}
 	</select>
@@ -149,4 +150,10 @@
 			and paintings = #{page.queryObj.paintings}
 		</if>
 	</select>
+	<select id="getPaintings" resultType="java.lang.String"
+		parameterType="com.qzj.dto.PageRequest">
+		select distinct paintings from t_fingering
+		where 1 = 1
+	</select>
+	
 </mapper>

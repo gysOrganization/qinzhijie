@@ -135,6 +135,7 @@
 		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
 			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
 		</if>
+		order by orderNum asc
 		limit
 		#{page.startIndex}, #{page.pageSize}
 	</select>

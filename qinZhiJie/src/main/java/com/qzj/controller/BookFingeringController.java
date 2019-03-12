@@ -31,4 +31,19 @@ public class BookFingeringController extends BaseTgController {
 		result.setMessage("Success");
 		return result;
 	}
+	
+	
+	/**
+	 * 查询所有的笔画数list
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value = "/getPaintings", method = RequestMethod.POST)
+	public ResponseData<PageResult<String>> getPaintings(HttpServletRequest request) {
+		ResponseData<PageResult<String>> result = new ResponseData<PageResult<String>>();
+		result.setData(fingeringService.getPaintings());
+		result.setCode("200");
+		result.setMessage("Success");
+		return result;
+	}
 }
