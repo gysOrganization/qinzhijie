@@ -20,3 +20,5 @@
 public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Book>> com.qzj.controller.BookDetailController.getList(com.qzj.dto.PageRequest<com.qzj.dto.Book>,javax.servlet.http.HttpServletRequest)
 to {[/book/getList],methods=[POST]}: There is already 'bookController' bean method
 public com.qzj.commos.vo.ResponseData<com.qzj.dto.PageResult<com.qzj.dto.Book>> com.qzj.controller.BookController.getList(com.qzj.dto.PageRequest<com.qzj.dto.Book>,javax.servlet.http.HttpServletRequest) mapped.
+[2019-03-12 16:42:39.419][https-jsse-nio-20880-exec-4][WARN][org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver][194]:Resolved exception caused by handler execution: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `long` from String "风雷引": not a valid Long value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `long` from String "风雷引": not a valid Long value
+ at [Source: (PushbackInputStream); line: 3, column: 17] (through reference chain: com.qzj.dto.PageRequest["pageSize"])
