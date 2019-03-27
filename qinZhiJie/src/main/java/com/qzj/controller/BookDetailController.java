@@ -23,6 +23,12 @@ public class BookDetailController extends BaseTgController {
 	@Autowired
 	private BookDetailService bookDetailService;
 
+	/**
+	 * 目录模糊查询，bookid 查询
+	 * @param page
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
 	public ResponseData<PageResult<BookDetail>> getList(@RequestBody PageRequest<BookDetail> page, HttpServletRequest request) {
 		ResponseData<PageResult<BookDetail>> result = new ResponseData<PageResult<BookDetail>>();

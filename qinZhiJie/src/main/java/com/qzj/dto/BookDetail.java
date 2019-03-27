@@ -19,6 +19,16 @@ public class BookDetail extends BaseTgEntity{
 	
 	private Integer orderNum;
 
+	private String allPath;
+	
+	public String getAllPath() {
+		return allPath;
+	}
+
+	public void setAllPath(String allPath) {
+		this.allPath = allPath;
+	}
+
 	public String getBookName() {
 		return bookName;
 	}

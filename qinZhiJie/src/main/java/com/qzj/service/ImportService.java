@@ -708,6 +708,31 @@ public class ImportService {
 			e.printStackTrace();
 		}
 	}
+	
+	//  将历代琴谱的每个图片都写到bookDetail的allPath字段中
+		public void importAllPath() {
+			PageRequest<BookDetail> page = new PageRequest<BookDetail>();
+			BookDetail bb = new BookDetail();
+			page.setQueryObj(bb);
+			long total = bookDetailDao.getTotal(page);
+			page.setPageSize(total);
+			List<BookDetail> list = bookDetailDao.getList(page);
+			for(BookDetail b : list) {
+				StringBuilder sb = new StringBuilder();
+				String path = b.getDirPath();
+				File f = new File(basePath + path);
+				if(f.isDirectory()) {
+					String[] l = f.list();
+					for(String s : l) {
+						sb.append(path + "\\" +  s + ";");
+					}
+					if(sb.length() > 0) {
+						b.setAllPath(sb.substring(0, sb.length()-1));
+						bookDetailDao.update(b);
+					}
+				}
+			}
+		}
 
 	public void ipmortBookLyric() throws IOException {
 		try {

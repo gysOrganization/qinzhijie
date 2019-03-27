@@ -53,6 +53,7 @@ public class ImportDataToDBController {
 		importService.importBookAll();
 		importService.importBookAll1();
 		importService.updateTimeTOBook();
+		importService.importAllPath();
 		result.setCode("200");
 		result.setMessage("success");
 		return result;

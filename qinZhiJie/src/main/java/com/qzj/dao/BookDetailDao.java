@@ -14,4 +14,6 @@ public interface BookDetailDao {
 	public List<BookDetail> getList(@Param(value="page") PageRequest<BookDetail> page);
 	
 	public long getTotal(@Param(value="page") PageRequest<BookDetail> page);
+	
+	public long update(@Param(value="bookDetail") BookDetail bookDetail);
 }

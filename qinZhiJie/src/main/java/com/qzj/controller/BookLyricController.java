@@ -23,6 +23,12 @@ public class BookLyricController extends BaseTgController {
 	@Autowired
 	private BookLyricService bookLyricService;
 
+	/**
+	 * 琴曲查询，支持模糊查询
+	 * @param page
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/getList", method = RequestMethod.POST)
 	public ResponseData<PageResult<BookLyric>> getList(@RequestBody PageRequest<BookLyric> page, HttpServletRequest request) {
 		ResponseData<PageResult<BookLyric>> result = new ResponseData<PageResult<BookLyric>>();
