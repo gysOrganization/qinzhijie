@@ -24,25 +24,22 @@ public class QinZhiJieStarter {
 		SpringApplication.run(QinZhiJieStarter.class, args);
 	}
 
-	/** HTTP跳转HTTPS **/
-	/*
-	 * @Bean public Connector connector() { Connector connector = new
-	 * Connector("org.apache.coyote.http11.Http11NioProtocol");
-	 * connector.setScheme("http"); connector.setPort(prot);
-	 * connector.setSecure(false); connector.setRedirectPort(serverprot); return
-	 * connector; }
-	 * 
-	 * @Bean public TomcatServletWebServerFactory
-	 * tomcatServletWebServerFactory(Connector connector) {
-	 * TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
-	 * 
-	 * @Override protected void postProcessContext(Context context) {
-	 * SecurityConstraint securityConstraint = new SecurityConstraint();
-	 * securityConstraint.setUserConstraint("CONFIDENTIAL"); SecurityCollection
-	 * collection = new SecurityCollection(); collection.addPattern("/*");
-	 * securityConstraint.addCollection(collection);
-	 * context.addConstraint(securityConstraint); } };
-	 * tomcat.addAdditionalTomcatConnectors(connector); return tomcat; }
-	 */
-
+	/**HTTP跳转HTTPS **/
+	 @Bean public Connector connector() { Connector connector = new
+	 Connector("org.apache.coyote.http11.Http11NioProtocol");
+	 connector.setScheme("http"); connector.setPort(prot);
+	 connector.setSecure(false); connector.setRedirectPort(serverprot); return
+	 connector; }
+	 
+	 @Bean public TomcatServletWebServerFactory
+	 tomcatServletWebServerFactory(Connector connector) {
+	 TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+	 
+	 @Override protected void postProcessContext(Context context) {
+	 SecurityConstraint securityConstraint = new SecurityConstraint();
+	 securityConstraint.setUserConstraint("CONFIDENTIAL"); SecurityCollection
+	 collection = new SecurityCollection(); collection.addPattern("/*");
+	 securityConstraint.addCollection(collection);
+	 context.addConstraint(securityConstraint); } };
+	 tomcat.addAdditionalTomcatConnectors(connector); return tomcat; }
 }

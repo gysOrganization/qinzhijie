@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qzj</groupId>
 	<artifactId>qinZhiJie</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>20190329</version>
 	<packaging>jar</packaging>
 	<name>qinZhiJie</name>
 	<description>qinZhiJie project for Spring Boot</description>

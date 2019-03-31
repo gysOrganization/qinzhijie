@@ -1,13 +1,12 @@
 server:
   port: 20880
   ssl:
-    key-password: 123456
+#    证书路径
+    key-store: qinzhijie.keystore
     key-store-type: JKS
-    key-store: classpath:qinzhijie.keystore
     key-alias: qzj
-    enabled: true
-
-    
+#    配置密码，就是在生成证书的时候输入的密码
+    key-store-password: 123456
 spring:
   application: 
     name: qzj
