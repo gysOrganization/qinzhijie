@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qzj</groupId>
-	<artifactId>qinZhiJie</artifactId>
-	<version>20190329</version>
-	<packaging>jar</packaging>
-	<name>qinZhiJie</name>
+	<artifactId>qinzhijie</artifactId>
+	<packaging>war</packaging>
+	<name>qinzhijie</name>
 	<description>qinZhiJie project for Spring Boot</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -65,6 +64,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!--忽略内嵌tomcat，打包部署到tomcat。注*本地运行的时候要把这一段忽略引入个注释掉，要不然项目启动不了-->
+<!-- 		    <exclusions>
+		      <exclusion>
+		         <groupId>org.springframework.boot</groupId>
+		         <artifactId>spring-boot-starter-tomcat</artifactId>
+		      </exclusion>
+		    </exclusions> -->
 		</dependency>
  		<!--处理2003 excel-->
         <dependency>

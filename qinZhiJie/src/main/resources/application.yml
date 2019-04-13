@@ -1,5 +1,5 @@
 server:
-  port: 20880
+  port: 8081
   ssl:
 #    证书路径
     key-store: qinzhijie.keystore
@@ -20,7 +20,7 @@ spring:
     
   datasource:
     name: carutoo
-    url: jdbc:mysql://127.0.0.1:3306/qinzhijie?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/qinzhijie?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
     druid:
