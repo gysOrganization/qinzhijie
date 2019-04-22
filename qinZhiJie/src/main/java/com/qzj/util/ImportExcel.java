@@ -138,7 +138,8 @@ public class ImportExcel {
 		return dataLst;
 	}
 
-	private List<List<String>> read(Workbook wb) {
+	@SuppressWarnings("deprecation")
+    private List<List<String>> read(Workbook wb) {
 		List<List<String>> dataLst = new ArrayList<List<String>>();
 		/** 得到第一个shell */
 		Sheet sheet = wb.getSheetAt(0);

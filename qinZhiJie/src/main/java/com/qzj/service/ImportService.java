@@ -117,7 +117,8 @@ public class ImportService {
 	}
 
 	// 导入(Z:\\06听古琴\\琴人\\800X800)对应的图片
-	public void ipmortMusicianPic2() {
+	@SuppressWarnings({"unchecked", "rawtypes"})
+    public void ipmortMusicianPic2() {
 		String dirPath = "Z:\\06听古琴\\琴人\\800X800";
 		File dir = new File(dirPath);
 		if (dir != null && dir.isDirectory()) {
@@ -156,7 +157,8 @@ public class ImportService {
 	}
 
 	// 导入(Z:\06听古琴\琴人\1200X1200)对应的图片
-	public void ipmortMusicianPic3() {
+	@SuppressWarnings({"rawtypes", "unchecked"})
+    public void ipmortMusicianPic3() {
 		String dirPath = "Z:\\06听古琴\\琴人\\1200X1200";
 		File dir = new File(dirPath);
 		if (dir != null && dir.isDirectory()) {
@@ -195,7 +197,8 @@ public class ImportService {
 	}
 
 	// 导入(Z:\06听古琴\琴人\1600X1600)对应的图片
-	public void ipmortMusicianPic4() {
+	@SuppressWarnings({"rawtypes", "unchecked"})
+    public void ipmortMusicianPic4() {
 		String dirPath = "Z:\\06听古琴\\琴人\\1600X1600";
 		File dir = new File(dirPath);
 		if (dir != null && dir.isDirectory()) {
@@ -234,7 +237,8 @@ public class ImportService {
 	}
 
 	// 导入(Z:\\06听古琴\\琴人)这里面的对应名字的文件夹的数据（就是除去上面1到4的文件夹的余下部分）
-	public void ipmortMusicianPic5() {
+	@SuppressWarnings({"rawtypes", "unchecked"})
+    public void ipmortMusicianPic5() {
 		String dirPath = "Z:\\06听古琴\\琴人";
 		File dir = new File(dirPath);
 		if (dir != null && dir.isDirectory()) {

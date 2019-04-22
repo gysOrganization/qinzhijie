@@ -11,9 +11,11 @@ import com.qzj.dto.PageRequest;
 @Mapper
 public interface BigPictureDao {
 
-	public List<BigPicture> getList(@Param(value="page") PageRequest page);
+	@SuppressWarnings("rawtypes")
+    public List<BigPicture> getList(@Param(value="page") PageRequest page);
 	
-	public long getTotal(@Param(value="page") PageRequest page);
+	@SuppressWarnings("rawtypes")
+    public long getTotal(@Param(value="page") PageRequest page);
 	
 	public long add(@Param(value="picture") BigPicture picture);
 	

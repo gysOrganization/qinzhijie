@@ -13,9 +13,11 @@ public interface MusicianDao {
 
 	public long add(@Param(value="item") Musician list);
 	
-	public List<Musician> getList(@Param(value="page") PageRequest page);
+	@SuppressWarnings("rawtypes")
+    public List<Musician> getList(@Param(value="page") PageRequest page);
 	
-	public long getTotal(@Param(value="page") PageRequest page);
+	@SuppressWarnings("rawtypes")
+    public long getTotal(@Param(value="page") PageRequest page);
 	
 	public long delete(@Param(value="list") List<String> list);
 	
