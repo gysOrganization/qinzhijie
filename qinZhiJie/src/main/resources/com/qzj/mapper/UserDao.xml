@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.UserDao">
+	<insert id="addUser" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.qzj.dto.User">
+		insert into t_user
+		(
+		username,
+		password,
+		telephone,
+		email,
+		trueName,
+		isAdmin,
+		lastLoginTime,
+		createTime,
+		updateTime
+		)
+		values(
+		#{username},
+		#{password},
+		#{telephone},
+		#{email},
+		#{trueName},
+		#{isAdmin},
+		#{lastLoginTime},
+		#{createTime},
+		#{updateTime})
+	</insert>
+
+	<update id="updateUser" parameterType="com.qzj.dto.User">
+		update t_user
+		<set>
+			<if test="password != null and password != ''">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="telephone != null and telephone != ''">
+				telephone = #{telephone,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null and email != ''">
+				email = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="trueName != null and trueName != ''">
+				trueName = #{trueName,jdbcType=VARCHAR},
+			</if>
+			<if test="lastLoginTime != null">
+				lastLoginTime = #{lastLoginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createTime != null">
+				createTime = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updateTime != null">
+				updateTime = #{updateTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	
+	<delete id="deleteUser"  parameterType="Long">
+		delete FROM t_user where id = #{id};
+	</delete>
+	
+	<select id="seletUserList" resultType="com.qzj.dto.User"
+		parameterType="java.util.HashMap">
+		select * from t_user where 1=1
+		<if test="username != null and username != ''">
+			 and username like CONCAT('%','${username}','%')
+		</if>
+		<if test="telephone != null and telephone != ''">
+			and telephone = #{telephone}
+		</if>
+		<if test="email != null and email != ''">
+			and email like CONCAT('%','${email}','%')
+		</if>
+		<if test="trueName != null and trueName != ''">
+			and trueName like CONCAT('%','${trueName}','%')
+		</if>
+	</select>
+	
+	<select id="countUser" resultType="Integer"
+		parameterType="java.util.HashMap">
+		select COUNT(1) from t_user where 1=1
+		<if test="username != null and username != ''">
+			 and username like CONCAT('%','${username}','%')
+		</if>
+		<if test="telephone != null and telephone != ''">
+			and telephone = #{telephone}
+		</if>
+		<if test="email != null and email != ''">
+			and email like CONCAT('%','${email}','%')
+		</if>
+		<if test="trueName != null and trueName != ''">
+			and trueName like CONCAT('%','${trueName}','%')
+		</if>
+	</select>
+	
+	<select id="userInfo" resultType="com.qzj.dto.User"
+		parameterType="java.lang.String">
+		select * from t_user where username = #{username} LIMIT 1;
+	</select>
+	
+	
+	
+	
+</mapper>

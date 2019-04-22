@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.BookLyricDao">
+	<insert id="add" parameterType="com.qzj.dao.BookLyricDao" useGeneratedKeys="true" keyProperty="id" keyColumn="id"> 
+		insert into t_book_lyric(
+		<if test="bookLyric.id != null">
+			id,
+		</if>
+		<if test="bookLyric.musicofviolin != null and bookLyric.musicofviolin != ''">
+			musicofviolin,
+		</if>
+		<if test="bookLyric.desc != null and bookLyric.desc != ''">
+			`desc`,
+		</if>
+
+		<if test="bookLyric.url != null and bookLyric.url != ''">
+			url,
+		</if>
+
+		<if test="bookLyric.strokes != null and bookLyric.strokes != ''">
+			strokes,
+		</if>
+		<if test="bookLyric.createBy != null and bookLyric.createBy != ''">
+			createBy,
+		</if>
+		<if test="bookLyric.createTime != null">
+			createTime,
+		</if>
+		<if test="bookLyric.updateTime != null">
+			updateTime,
+		</if>
+		<if test="bookLyric.updateBy != null and bookLyric.updateBy != ''">
+			updateBy
+		</if>
+		)
+		values(
+		
+		<if test="bookLyric.id != null">
+			#{bookLyric.id},
+		</if>
+		<if test="bookLyric.musicofviolin != null and bookLyric.musicofviolin != ''">
+			#{bookLyric.musicofviolin,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.desc != null and bookLyric.desc != ''">
+			#{bookLyric.desc,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.url != null and bookLyric.url != ''">
+			#{bookLyric.url,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.strokes != null and bookLyric.strokes != ''">
+			#{bookLyric.strokes,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.createBy != null and bookLyric.createBy != ''">
+			#{bookLyric.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.createTime != null">
+			#{bookLyric.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookLyric.updateTime != null">
+			#{bookLyric.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookLyric.updateBy != null and bookLyric.updateBy != ''">
+			#{bookLyric.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+	
+	<select id="selectList" resultType="com.qzj.dto.Book"
+		parameterType="java.util.HashMap">
+		select * from t_book_lyric where 1=1
+		<if test="musicofviolin != null and musicofviolin != ''">
+			 and musicofviolin = #{musicofviolin}
+		</if>
+	</select>
+	
+	<update id="update" parameterType="com.qzj.dto.Book">
+			update t_book_lyric set 
+		<if test="bookLyric.desc != null and bookLyric.desc != ''">
+			`desc` = #{bookLyric.desc,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.url != null and bookLyric.url != ''">
+			url = #{bookLyric.url,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.strokes != null and bookLyric.strokes != ''">
+			strokes = #{bookLyric.strokes,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.createBy != null and bookLyric.createBy != ''">
+			createBy = #{bookLyric.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="bookLyric.createTime != null">
+			createTime = #{bookLyric.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookLyric.updateTime != null">
+			updateTime = #{bookLyric.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookLyric.updateBy != null and bookLyric.updateBy != ''">
+			updateBy = #{bookLyric.updateBy,jdbcType=VARCHAR}
+		</if>
+		where id = #{bookLyric.id,jdbcType=VARCHAR}
+	</update>
+	<select id="getList" resultType="com.qzj.dto.BookLyric"
+		parameterType="com.qzj.dto.PageRequest">
+		select * from t_book_lyric
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.musicofviolin != null and page.queryObj.musicofviolin != ''">
+			and musicofviolin like #{page.queryObj.musicofviolin,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.desc != null and page.queryObj.desc != ''">
+			and `desc` like #{page.queryObj.desc,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.strokes != null">
+			and strokes = #{page.queryObj.strokes}
+		</if>
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_book_lyric
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.musicofviolin != null and page.queryObj.musicofviolin != ''">
+			and musicofviolin like #{page.queryObj.musicofviolin,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.desc != null and page.queryObj.desc != ''">
+			and `desc` like #{page.queryObj.desc,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.strokes != null">
+			and strokes = #{page.queryObj.strokes}
+		</if>
+	</select>
+	</mapper>

@@ -1,0 +1,5 @@
+
+start.sh 包括 以下动作 start / stop / restart / check / kill...."
+执行脚本时加上以上动作:  ./start.sh start   即可
+
+config 文件夹  放配置问下，springboot  读取文件 是优先工程同路径config目录，如果不存在这是读取jar包的配置文件

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qzj.dao.BookDetailDao">
+	<insert id="add" parameterType="com.qzj.dao.BookDetailDao">
+		insert into t_book_detail(
+		<if test="bookDetail.bookId != null">
+			bookId,
+		</if>
+		<if test="bookDetail.partName != null and bookDetail.partName != ''">
+			partName,
+		</if>
+
+		<if test="bookDetail.dirPath != null and bookDetail.dirPath != ''">
+			dirPath,
+		</if>
+
+		<if test="bookDetail.orderNum != null">
+			orderNum,
+		</if>
+		
+		<if test="bookDetail.createBy != null and bookDetail.createBy != ''">
+			createBy,
+		</if>
+		<if test="bookDetail.createTime != null">
+			createTime,
+		</if>
+		<if test="bookDetail.updateTime != null">
+			updateTime,
+		</if>
+		<if test="bookDetail.updateBy != null and bookDetail.updateBy != ''">
+			updateBy
+		</if>
+		)
+		values(
+		<if test="bookDetail.bookId != null">
+			#{bookDetail.bookId},
+		</if>
+		<if test="bookDetail.partName != null and bookDetail.partName != ''">
+			#{bookDetail.partName,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.dirPath != null and bookDetail.dirPath != ''">
+			#{bookDetail.dirPath,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.orderNum != null and bookDetail.orderNum != ''">
+			#{bookDetail.orderNum},
+		</if>
+		<if test="bookDetail.createBy != null and bookDetail.createBy != ''">
+			#{bookDetail.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.createTime != null">
+			#{bookDetail.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookDetail.updateTime != null">
+			#{bookDetail.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookDetail.updateBy != null and bookDetail.updateBy != ''">
+			#{bookDetail.updateBy,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+	<select id="getList" resultType="com.qzj.dto.BookDetail"
+		parameterType="com.qzj.dto.PageRequest">
+		SELECT tt.id, tt.bookId,t.bookName, tt.partName,tt.orderNum, tt.dirPath, tt.allPath, tt.createBy,tt.createTime,tt.updateTime, tt.updateBy FROM t_book_detail tt
+		JOIN t_book t ON tt.bookId = t.id
+		WHERE 1 = 1
+		<if test="page.queryObj.id != null">
+			and tt.id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookId != null">
+			and tt.bookId = #{page.queryObj.bookId}
+		</if>
+		<if test="page.queryObj.partName != null and page.queryObj.partName != ''">
+			and tt.partName like #{page.queryObj.partName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and tt.dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+		order by orderNum asc
+		limit
+		#{page.startIndex}, #{page.pageSize}
+	</select>
+	<select id="getTotal" resultType="java.lang.Long"
+		parameterType="com.qzj.dto.PageRequest">
+		select count(1) from t_book_detail
+		where 1 = 1
+		<if test="page.queryObj.id != null">
+			and id = #{page.queryObj.id}
+		</if>
+		<if test="page.queryObj.bookId != null">
+			and bookId = #{page.queryObj.bookId}
+		</if>
+		<if test="page.queryObj.partName != null and page.queryObj.partName != ''">
+			and partName like #{page.queryObj.partName,jdbcType=VARCHAR}
+		</if>
+		<if test="page.queryObj.dirPath != null and page.queryObj.dirPath != ''">
+			and dirPath like #{page.queryObj.dirPath,jdbcType=VARCHAR}
+		</if>
+	</select>
+	<update id="update" parameterType="com.qzj.dto.BookDetail">
+			update t_book_detail set 
+		<if test="bookDetail.bookId != null and bookDetail.bookId != ''">
+			bookId = #{bookDetail.bookId,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.partName != null and bookDetail.partName != ''">
+			partName = #{bookDetail.partName,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.dirPath != null and bookDetail.dirPath != ''">
+			dirPath = #{bookDetail.dirPath,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.allPath != null and bookDetail.allPath != ''">
+			allPath = #{bookDetail.allPath},
+		</if>
+		<if test="bookDetail.orderNum != null and bookDetail.orderNum != ''">
+			orderNum = #{bookDetail.orderNum},
+		</if>
+		<if test="bookDetail.createBy != null and bookDetail.createBy != ''">
+			createBy = #{bookDetail.createBy,jdbcType=VARCHAR},
+		</if>
+		<if test="bookDetail.createTime != null">
+			createTime = #{bookDetail.createTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookDetail.updateTime != null">
+			updateTime = #{bookDetail.updateTime,jdbcType=TIMESTAMP},
+		</if>
+		<if test="bookDetail.updateBy != null and bookDetail.updateBy != ''">
+			updateBy = #{bookDetail.updateBy,jdbcType=VARCHAR}
+		</if>
+		where id = #{bookDetail.id,jdbcType=VARCHAR}
+	</update>
+</mapper>
