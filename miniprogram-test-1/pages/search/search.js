@@ -17,7 +17,6 @@ Page({
         queryStr: event.queryStr
       },
       success: function (res) {
-        var searchData = res.data
         if (res.data.data !== null) {
           that.setData({
             bookList: res.data.data.bookList,
@@ -53,15 +52,6 @@ Page({
             lyricList: res.data.data.lyricList
           })
         }
-
-        var pages = getCurrentPages()
-        var curPages = pages[pages.length - 1].route
-
-        if ('pages/search/search' !== curPages) {
-          wx.navigateTo({
-            url: '../search/search'
-          })
-        }
       }
     })  
   },
@@ -74,7 +64,7 @@ Page({
   showLyricDetail(e) {
     var id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../lyric/lyric?lyricId=' + id
+      url: '../lyricDetail/lyricDetail?lyricId=' + id
     })
   }
 })

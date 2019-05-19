@@ -6,7 +6,7 @@
     <image class="" src='http://47.105.212.81:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
   </view>
 
-  <view style='height: 300rpx'></view>
+  <view style='height: 200rpx'></view>
 
 
 
@@ -24,7 +24,7 @@
       </block>
     </view>
   </view>
-  <view style='height:660rpx'></view>
+  <view style='height:200rpx'></view>
   <view class="weui-footer">
     <view class="weui-footer__links">
       <navigator url="" class="weui-footer__link">琴之界</navigator>
