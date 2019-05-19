@@ -1,0 +1,12 @@
+<view class="schoollist">
+  <block wx:for="{{picList}}">
+    <view class="school-list">
+      <view>
+        <view class="school-list-info" catchtap='showPic' data-str="{{item}}">
+          <image class="school-list-photo" src='http://47.105.212.81:8082/qinzhijie/images/{{item}}'></image>
+         <text class="school-list-desc">第{{index + 1}}张</text>
+          </view>
+      </view>
+    </view>
+  </block>
+</view>
