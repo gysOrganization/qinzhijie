@@ -8,7 +8,7 @@ Page({
   onLoad: function (event) {
     var that = this
     wx.request({
-      url: 'https://www.gysp.top:8081/station/search',
+      url: 'https://www.gysp.top/station/search',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -36,7 +36,7 @@ Page({
   query: function(event) {
     var that = this
     wx.request({
-      url: 'https://www.gysp.top:8081/station/search',
+      url: 'https://www.gysp.top/station/search',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
