@@ -1,6 +1,6 @@
 <view class='search'>
   <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
-  <image class="" src='http://47.105.212.81:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
+  <image class="" src='http://www.gysp.top:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
 </view>
 <view style='height: 80rpx'></view>
 <view>

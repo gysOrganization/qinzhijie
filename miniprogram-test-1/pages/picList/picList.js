@@ -5,7 +5,7 @@ Page({
   onLoad: function(event) {
     var that = this
     wx.request({
-      url: 'https://127.0.0.1:8081/bookDetail/getPicList',
+      url: 'https://www.gysp.top:8081/bookDetail/getPicList',
       method: 'POST',
       data: {
         currentPage: "1",

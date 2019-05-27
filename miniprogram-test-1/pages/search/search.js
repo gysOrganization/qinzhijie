@@ -8,7 +8,7 @@ Page({
   onLoad: function (event) {
     var that = this
     wx.request({
-      url: 'https://127.0.0.1:8081/station/search',
+      url: 'https://www.gysp.top:8081/station/search',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -36,7 +36,7 @@ Page({
   query: function(event) {
     var that = this
     wx.request({
-      url: 'https://127.0.0.1:8081/station/search',
+      url: 'https://www.gysp.top:8081/station/search',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -64,7 +64,7 @@ Page({
   showLyricDetail(e) {
     var id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../lyricDetail/lyricDetail?lyricId=' + id
+      url: '/pages/lyricDetail/lyricDetail?lyricId=' + id
     })
   }
 })

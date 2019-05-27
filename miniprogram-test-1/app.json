@@ -4,7 +4,8 @@
     "pages/search/search",
     "pages/detailList/detailList",
     "pages/picList/picList",
-    "pages/pic/pic"
+    "pages/pic/pic",
+    "pages/lyricDetail/lyricDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -17,7 +17,7 @@
  
 .school-list-photo{
   width: 350rpx;
-  height: 250rpx;
+  height: 500rpx;
 }
 .school-list-desc{
   display: block;
