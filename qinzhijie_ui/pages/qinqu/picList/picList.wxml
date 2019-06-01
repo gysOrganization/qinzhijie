@@ -1,0 +1,24 @@
+<view class='cu-custom'>
+  <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+    <view slot="content">
+      琴之界
+    </view>
+  </cu-custom>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text> 返回
+    </navigator>
+  </view>
+</view>
+<view class="schoollist">
+  <block wx:for="{{picList}}">
+    <view class="school-list">
+      <view>
+        <view class="school-list-info" catchtap='showPic' data-str="{{item}}">
+          <image class="school-list-photo" src='http://www.gysp.top:8082/qinzhijie/images/{{item}}'></image>
+         <text class="school-list-desc">第{{index + 1}}张</text>
+          </view>
+      </view>
+    </view>
+  </block>
+</view>

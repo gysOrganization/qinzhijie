@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">个人资料</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>星辰大海</view>
+  <view class='text-content'>
+    <view>你眼里的星辰大海 是我从未见过的皓月明空!</view>
+    <view class='margin-top-sm'>你别过年就只是长了一岁而已;</view>
+    <view class='margin-top-sm'>你得改变 你要长大,要不负众望; </view>
+    <view class='margin-top-sm'>你想要的星辰大海,要自己给自己;</view>
+    <view class='margin-top-sm'>你想要的星辰大海,也只有自己才能给自己!</view>
+
+    <view class='margin-top-sm'>(๑❛ᴗ❛๑)</view>
+  </view>
+</view>
