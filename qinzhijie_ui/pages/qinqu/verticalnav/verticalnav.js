@@ -17,7 +17,7 @@ Page({
     });
     var that = this;
     wx.request({
-      url: 'https://47.105.212.81:443/book/getList',
+      url: 'http://47.105.212.81:8081/book/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -26,7 +26,7 @@ Page({
         }
       },
       success: function (res) {
-        if (res.data.data !== null) {
+        if (res.data.data) {
           that.setData({
             bookList: res.data.data.dataList
           })
@@ -50,7 +50,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://47.105.212.81:443/station/search',
+      url: 'http://47.105.212.81:8081/station/search',
       method: 'POST',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"

@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/qinqu/verticalnav/verticalnav",
+    "pages/qinqu/detailList/detailList",
+    "pages/qinqu/picList/picList",  
+    "pages/qinqu/pic/pic",
     "pages/basics/layout/layout",
     "pages/basics/button/button",
     "pages/basics/button/design",
