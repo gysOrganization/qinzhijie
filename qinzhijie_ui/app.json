@@ -5,6 +5,8 @@
     "pages/qinqu/detailList/detailList",
     "pages/qinqu/picList/picList",  
     "pages/qinqu/pic/pic",
+    "pages/qinqu/lyric/lyric",
+    "pages/qinqu/lyricDetail/lyricDetail",
     "pages/basics/layout/layout",
     "pages/basics/button/button",
     "pages/basics/button/design",

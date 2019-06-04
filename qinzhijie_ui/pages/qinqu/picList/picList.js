@@ -12,7 +12,7 @@ Page({
   onLoad: function(event) {
     var that = this
     wx.request({
-      url: 'https://47.105.212.81:443/bookDetail/getPicList',
+      url: 'http://47.105.212.81:8081/bookDetail/getPicList',
       method: 'POST',
       data: {
         currentPage: "1",

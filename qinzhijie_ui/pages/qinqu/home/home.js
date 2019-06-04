@@ -15,10 +15,15 @@ Component({
       {
         title: '琴曲',
         img: 'https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg',
-        url: '/indexes/indexes'
+        url: '/lyric/lyric'
       },
       {
         title: '琴声',
+        img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
+        url: '/animation/animation'
+      },
+      {
+        title: '指法',
         img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
         url: '/animation/animation'
       }

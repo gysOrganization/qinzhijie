@@ -1,0 +1,40 @@
+<view class='cu-custom'>
+  <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+    <view slot="content">
+      琴之界
+    </view>
+  </cu-custom>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text> 返回
+    </navigator>
+  </view>
+</view>
+<!-- <view class='search'>
+  <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+  <image class="" src='http://www.gysp.top:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
+</view> -->
+<view class="cu-bar bg-white search fixed" style="top:44px;background-color:var(--white);">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
+  </view>
+</view>
+<view style='height: 60px'></view>
+<view class="VerticalBox">
+  <view></view>
+  <block wx:for='{{lyricList}}'  wx:key id="main-{{index}}">
+    <!-- data-*属性在触发事件时获取  -->
+    <view bindtap='showLyricDetail' data-id='{{item.id}}' class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" style='margin: 1px 0 0 0'>
+      <view class="cu-item arrow">
+        <view class="content" hover-class="none">
+          <text class="cuIcon-formfill text-green"></text>
+          <text class="text-grey">{{item.musicofviolin}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

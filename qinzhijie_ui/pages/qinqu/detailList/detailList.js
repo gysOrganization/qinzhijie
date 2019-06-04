@@ -14,7 +14,7 @@ Page({
   onLoad: function (event) {
     var that = this
     wx.request({
-      url: 'https://47.105.212.81:443/bookDetail/getList',
+      url: 'http://47.105.212.81:8081/bookDetail/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -49,7 +49,7 @@ Page({
   query: function (event) {
     var that = this
     wx.request({
-      url: 'https://47.105.212.81:443/bookDetail/getListSpec',
+      url: 'http://47.105.212.81:8081/bookDetail/getListSpec',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -79,7 +79,7 @@ Page({
     var id = e.currentTarget.dataset.id
     var that = this
     wx.request({
-      url: 'https://47.105.212.81:443/bookDetail/getList',
+      url: 'http://47.105.212.81:8081/bookDetail/getList',
       method: 'POST',
       data: {
         currentPage: "1",
