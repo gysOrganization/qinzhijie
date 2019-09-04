@@ -10,4 +10,20 @@
     </navigator>
   </view>
 </view>
-<image class='.img' src='http://www.gysp.top/img/{{url}}'></image>
+<!-- <image class='.img' src='http://www.gysp.top/img/{{url}}'></image> -->
+
+<!-- <swiper>
+ <swiper-item wx:for="{{picList}}">
+  <image src='http://www.gysp.top/img/{{item}}' width="100%" height="100%" mode='widthFix' class='img' />
+ </swiper-item>
+</swiper> -->
+
+<view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+    <block wx:for='{{picList}}' wx:key="{{index}}">
+      <swiper-item>
+        <image src="http://www.gysp.top/img/{{item}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+      </swiper-item>
+      </block>
+    </swiper>
+  </view>

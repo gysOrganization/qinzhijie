@@ -7,7 +7,8 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    picList: []
+    picList: [],
+    bookDetailId: ''
   },
   onLoad: function(event) {
     var that = this
@@ -21,10 +22,11 @@ Page({
           id: event.bookDetailId
         }
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.data !== null) {
           that.setData({
-            picList: res.data.data.dataList[0].allPath.replace(/\\/g,"//").split(";")
+            picList: res.data.data.dataList[0].allPath.replace(/\\/g,"//").split(";"),
+            bookDetailId: event.bookDetailId
           })
         }
       }
@@ -32,7 +34,7 @@ Page({
   },
   showPic(e){
     wx.navigateTo({
-      url: '/pages/qinqu/pic/pic?url=' + e.currentTarget.dataset.str
+      url: '/pages/qinqu/pic/pic?url=' + e.currentTarget.dataset.str + '&bookDetailId=' + this.data.bookDetailId
     })
   }
 })
