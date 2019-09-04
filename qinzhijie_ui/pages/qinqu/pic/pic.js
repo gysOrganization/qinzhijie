@@ -45,7 +45,8 @@ Page({
       success: function (res) {
         if (res.data.data !== null) {
           that.setData({
-            picList: res.data.data.dataList[0].allPath.replace(/\\/g, "//").split(";")
+            picList: res.data.data.dataList[0].allPath.replace(/\\/g, "//").split(";"),
+            current: event.current
           })
         }
       }
@@ -56,7 +57,7 @@ Page({
       imgheight = e.detail.height,
       //宽高比  
       ratio = imgwidth / imgheight;
-    console.log(imgwidth, imgheight)
+   //console.log(imgwidth, imgheight)
     //计算的高度值  
     var viewHeight = 750 / ratio;
     var imgheight = viewHeight;

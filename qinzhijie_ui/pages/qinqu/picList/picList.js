@@ -33,8 +33,10 @@ Page({
     })  
   },
   showPic(e){
+    var num = e.currentTarget.dataset.index
+    console.log(num)
     wx.navigateTo({
-      url: '/pages/qinqu/pic/pic?url=' + e.currentTarget.dataset.str + '&bookDetailId=' + this.data.bookDetailId
+      url: '/pages/qinqu/pic/pic?current=' + num + '&bookDetailId=' + this.data.bookDetailId
     })
   }
 })
