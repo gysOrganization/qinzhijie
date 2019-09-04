@@ -19,7 +19,7 @@ Page({
   onLoad: function (event) {
     var that = this
     wx.request({
-      url: 'https://localhost:8081/bookLyric/getList',
+      url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -41,7 +41,7 @@ Page({
   query: function (event) {
     var that = this
     wx.request({
-      url: 'https://localhost:8081/bookLyric/getList',
+      url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
       header: {
       },
@@ -66,7 +66,7 @@ Page({
     var that = this
     var id = e.currentTarget.dataset.id
     wx.request({
-      url: 'https://localhost:8081/bookLyric/getList',
+      url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
       data: {
         currentPage: "1",

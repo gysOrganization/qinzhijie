@@ -17,7 +17,7 @@ Page({
     });
     var that = this;
     wx.request({
-      url: 'http://47.105.212.81:8081/book/getList',
+      url: 'https://www.gysp.top/book/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -50,7 +50,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'http://47.105.212.81:8081/station/search',
+      url: 'https://www.gysp.top/station/search',
       method: 'POST',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
