@@ -19,7 +19,7 @@
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">课程</view>
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">九嶷琴社</view>
   </view>
   <view class="action" bindtap="NavChange" data-cur="about">
     <view class='cuIcon-cu-image'>

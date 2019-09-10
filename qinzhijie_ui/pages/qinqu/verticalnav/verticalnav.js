@@ -10,12 +10,15 @@ Page({
     bookList: [],
     load: true
   },
-  onLoad() {
+  onLoad(event) {
     wx.showLoading({
       title: '加载中...',
       mask: true
     });
     var that = this;
+    that.setData({
+      inputValue: event.queryStr
+    })
     wx.request({
       url: 'https://www.gysp.top/book/getList',
       method: 'POST',
@@ -23,6 +26,7 @@ Page({
         currentPage: "1",
         pageSize: "9999",
         queryObj: {
+          bookName: event.queryStr
         }
       },
       success: function (res) {
@@ -60,7 +64,6 @@ Page({
       },
       success: function (res) {
         var searchData = res.data
-        console.log(res.data.data.dataList)
         if (res.data.data !== null) {
           that.setData({
             bookList: res.data.data.bookList

@@ -12,6 +12,9 @@ Page({
 
   onLoad: function (event) {
     var that = this
+    that.setData({
+      inputValue: event.queryStr
+    })
     wx.request({
       url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
@@ -19,7 +22,7 @@ Page({
         currentPage: "1",
         pageSize: "200",
         queryObj: {
-          
+          musicofviolin: event.queryStr
         }
       },
       success: function(res) {

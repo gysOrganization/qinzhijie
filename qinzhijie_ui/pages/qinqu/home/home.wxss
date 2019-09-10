@@ -34,3 +34,10 @@
   transform: skew(10deg, 0deg);
   opacity: 0.1;
 }
+.other {
+/* background: #8799a3; */
+pointer-events: none;
+}
+.chose {
+/* background: #8799a3; */
+}
