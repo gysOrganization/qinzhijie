@@ -68,7 +68,7 @@ Component({
       var that = this
       if (this.data.inputValue != null && this.data.inputValue != undefined && this.data.inputValue != ''){
             wx.request({
-              url: 'http://localhost:8081/station/searchStatus',
+              url: 'https://www.gysp.top/station/searchStatus',
               method: 'POST',
               header: {
                 "Content-Type": "application/x-www-form-urlencoded"
