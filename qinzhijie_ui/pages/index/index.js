@@ -1,6 +1,9 @@
 Page({
   data: {
-    PageCur: 'basics'
+    PageCur: 'basics',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   NavChange(e) {
     this.setData({
@@ -14,4 +17,13 @@ Page({
       path: '/pages/index/index'
     }
   },
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  }
+
 })

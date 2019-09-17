@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index_before/index_before",
     "pages/qinqu/verticalnav/verticalnav",
     "pages/qinqu/detailList/detailList",
     "pages/qinqu/picList/picList",  

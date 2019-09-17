@@ -1,0 +1,33 @@
+<view class='cu-custom'>
+  <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+    <view slot="content">
+      琴之界
+    </view>
+  </cu-custom>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text> 返回
+    </navigator>
+  </view>
+</view>
+<view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='/images/wx_login.png'></image>
+        </view>
+
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+    <view></view>
+</view>

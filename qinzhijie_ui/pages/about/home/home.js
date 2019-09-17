@@ -1,3 +1,6 @@
+//获取应用实例
+const app = getApp()
+
 Component({
   options: {
     addGlobalClass: true,
@@ -6,10 +9,15 @@ Component({
     starCount: 0,
     forksCount: 0,
     visitTotal: 0,
+    userInfo: {}
   },
   attached() {
-    console.log("success")
     let that = this;
+    console.log(1111111111111111)
+    console.log(app.globalData.userInfo)
+    that.setData({
+      userInfo: app.globalData.userInfo
+    })
     wx.showLoading({
       title: '数据加载中',
       mask: true,

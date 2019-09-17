@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
+	"libVersion": "2.8.2",
 	"appid": "wxa163a5a1bddc2c89",
 	"projectname": "ColorUI2.0-demo",
 	"debugOptions": {

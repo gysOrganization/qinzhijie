@@ -5,8 +5,8 @@
     </view>
     </cu-custom>
   <view class="UCenter-bg">
-    <image src="/images/logo.png" class="png" mode="widthFix"></image>
-    <view class="text-xl">星辰大海
+    <image src="{{userInfo.avatarUrl}}" class="png" mode="widthFix"></image>
+    <view class="text-xl">{{userInfo.nickName}}
       <text class="text-df"></text>
     </view>
     <view class="margin-top-sm">
@@ -40,7 +40,7 @@
     </view> -->
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/about/about/about" hover-class="none">
-        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+        <image src="{{userInfo.avatarUrl}}" class="png" mode="aspectFit"></image>
         <text class="text-grey">个人资料</text>
       </navigator>
     </view>
