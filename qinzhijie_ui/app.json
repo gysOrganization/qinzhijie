@@ -8,6 +8,7 @@
     "pages/qinqu/pic/pic",
     "pages/qinqu/lyric/lyric",
     "pages/qinqu/lyricDetail/lyricDetail",
+    "pages/qinqu/audio/audio",
     "pages/basics/layout/layout",
     "pages/basics/button/button",
     "pages/basics/button/design",
@@ -50,5 +51,8 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }

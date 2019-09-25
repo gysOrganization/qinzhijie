@@ -12,26 +12,15 @@ Component({
     inputValue:'',
     list: [
       {
-        title: '历代琴谱',
-        img: 'https://image.weilanwl.com/color2.0/plugin/qpczdh2307.jpg',
-        url: '/verticalnav/verticalnav'
+        title: '历代琴谱'
       },
       {
-        title: '琴曲',
-        img: 'https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg',
-        url: '/lyric/lyric'
+        title: '琴曲'
       }
-      // ,
-      // {
-      //   title: '琴声',
-      //   img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
-      //   url: '/animation/animation'
-      // },
-      // {
-      //   title: '指法',
-      //   img: 'https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg',
-      //   url: '/animation/animation'
-      // }
+      ,
+      {
+        title: '琴声'
+      }
     ]
   },
   methods: {
@@ -52,7 +41,7 @@ Component({
       } else if (e.currentTarget.dataset.id == 2){
         childUrl = "/lyric/lyric"
       } else if (e.currentTarget.dataset.id == 3){
-        childUrl = ""
+        childUrl = "/audio/audio"
       }
 
       wx.navigateTo({
@@ -62,7 +51,7 @@ Component({
     inputBind: function (event) {
       this.setData({
         inputValue: event.detail.value
-      })
+      })  
     },
     query(e){
       var that = this

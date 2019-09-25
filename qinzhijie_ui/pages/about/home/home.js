@@ -9,15 +9,18 @@ Component({
     starCount: 0,
     forksCount: 0,
     visitTotal: 0,
-    userInfo: {}
+    userInfo: {},
+    isloginIn:0
   },
   attached() {
     let that = this;
-    console.log(1111111111111111)
-    console.log(app.globalData.userInfo)
-    that.setData({
-      userInfo: app.globalData.userInfo
-    })
+    if (app.globalData.userInfo != undefined){
+      that.setData({
+        userInfo: app.globalData.userInfo,
+        isloginIn:1
+      })
+    }
+
     wx.showLoading({
       title: '数据加载中',
       mask: true,
@@ -82,5 +85,17 @@ Component({
         current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
       })
     },
+    loginIn(){
+      wx.getSetting({
+      success: res => {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          if (!res.authSetting['scope.userInfo']){
+            wx.navigateTo({
+              url: '/pages/index_before/index_before'
+            })
+          }
+      }
+    })
+    }
   }
 })

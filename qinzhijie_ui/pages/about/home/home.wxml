@@ -4,7 +4,12 @@
       琴之界
     </view>
     </cu-custom>
-  <view class="UCenter-bg">
+    <view class="UCenter-bg" style="{{0 == isloginIn  ? 'display:true' : 'display:none'}}">
+    <view class="cu-avatar xl round"style="background-image:url(http://www.gysp.top/img/system/touxiang.jpg);">   
+    </view>
+    <view style="margin-top:10px"><button class="cu-btn round bg-red shadow" bindtap='loginIn'>登录/注册</button></view>
+    </view>
+  <view class="UCenter-bg" style="{{1 == isloginIn ? 'display:true' : 'display:none'}}">
     <image src="{{userInfo.avatarUrl}}" class="png" mode="widthFix"></image>
     <view class="text-xl">{{userInfo.nickName}}
       <text class="text-df"></text>
@@ -39,13 +44,13 @@
       </view>
     </view> -->
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+      <navigator class="content" url="{{1 == isloginIn ? '/pages/about/about/about' : ''}}" hover-class="none">
         <image src="{{userInfo.avatarUrl}}" class="png" mode="aspectFit"></image>
         <text class="text-grey">个人资料</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+      <navigator class="content" url="{{1 == isloginIn ? '/pages/about/log/log' : ''}}" hover-class="none">
         <text class="cuIcon-formfill text-green"></text>
         <text class="text-grey">课程记录</text>
       </navigator>

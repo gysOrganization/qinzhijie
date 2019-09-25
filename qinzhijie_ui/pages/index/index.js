@@ -9,6 +9,14 @@ Page({
     this.setData({
       PageCur: e.currentTarget.dataset.cur
     })
+  }, 
+  onLoad: function (event) {
+    var that = this
+    if (event.pageCur != undefined){
+      that.setData({
+        PageCur: event.pageCur
+      })
+    }
   },
   onShareAppMessage() {
     return {
