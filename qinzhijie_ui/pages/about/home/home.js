@@ -13,6 +13,7 @@ Component({
     isloginIn:0
   },
   attached() {
+    this.checkUserInfo();
     let that = this;
     if (app.globalData.userInfo != undefined){
       that.setData({
@@ -96,6 +97,23 @@ Component({
           }
       }
     })
+    },
+    checkUserInfo(){
+      wx.getSetting({
+        success: res => {
+          //查看userinfo的全局变量是否为空，如果为空且已经授权，就再去取一次userinfo
+          if (getApp().globalData.userInfo == undefined && res.authSetting['scope.userInfo']) {
+            wx.getUserInfo({
+              success: res => {
+                getApp().globalData.userInfo = res.userInfo
+              }
+            })
+            wx.navigateTo({
+              url: '/pages/index/index?pageCur=about'
+            })
+          }
+        }
+      })
     }
   }
 })

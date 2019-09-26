@@ -9,18 +9,18 @@
     </view>
     <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="component1">
+  <!-- <view class="action" bindtap="NavChange" data-cur="component1">
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
     </view>
     <view class="{{PageCur=='component'?'text-green':'text-gray'}}">学院</view>
-  </view>
-  <view class="action" bindtap="NavChange" data-cur="plugin1">
+  </view> -->
+  <!-- <view class="action" bindtap="NavChange" data-cur="plugin1">
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
     </view>
     <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">九嶷琴社</view>
-  </view>
+  </view> -->
   <view class="action" bindtap="NavChange" data-cur="about">
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
