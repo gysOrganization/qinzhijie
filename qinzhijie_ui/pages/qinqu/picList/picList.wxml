@@ -1,5 +1,5 @@
 <view class='cu-custom'>
-  <cu-custom bgImage="http://www.gysp.top/img/color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
@@ -15,7 +15,7 @@
     <view class="school-list">
       <view>
         <view class="school-list-info" catchtap='showPic' data-str="{{item}}" data-index="{{index}}">
-          <image class="school-list-photo" src='http://www.gysp.top/img/{{item}}'></image>
+          <image class="school-list-photo" src='http://www.gysp.top/img?path={{item}}&scale=0.3&quality=0.5'></image>
          <text class="school-list-desc">第{{index + 1}}张</text>
           </view>
       </view>

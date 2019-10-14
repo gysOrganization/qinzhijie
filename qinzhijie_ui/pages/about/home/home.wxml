@@ -1,11 +1,11 @@
 <scroll-view scroll-y class="scrollPage">
-  <cu-custom bgImage="http://www.gysp.top/img/color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
     </cu-custom>
     <view class="UCenter-bg" style="{{0 == isloginIn  ? 'display:true' : 'display:none'}}">
-    <view class="cu-avatar xl round"style="background-image:url(http://www.gysp.top/img/system/touxiang.jpg);">   
+    <view class="cu-avatar xl round"style="background-image:url(http://www.gysp.top/img?path=system/touxiang.jpg);">   
     </view>
     <view style="margin-top:10px"><button class="cu-btn round bg-red shadow" bindtap='loginIn'>登录/注册</button></view>
     </view>

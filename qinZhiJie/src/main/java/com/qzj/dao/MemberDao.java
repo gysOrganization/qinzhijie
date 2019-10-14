@@ -11,11 +11,9 @@ import com.qzj.dto.PageRequest;
 @Mapper
 public interface MemberDao {
 
-	@SuppressWarnings("rawtypes")
-    public List<Member> getList(@Param(value="page") PageRequest page);
+	public List<Member> getList(@Param(value="page") PageRequest page);
 	
-	@SuppressWarnings("rawtypes")
-    public long getTotal(@Param(value="page") PageRequest page);
+	public long getTotal(@Param(value="page") PageRequest page);
 	
 	public long add(@Param(value="member") Member member);
 	
