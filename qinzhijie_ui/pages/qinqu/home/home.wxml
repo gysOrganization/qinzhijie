@@ -4,44 +4,33 @@
       琴之界
     </view>
   </cu-custom>
-  <!-- <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-  <swiper-item wx:for="{{5}}" wx:key>
-    <image src="http://www.gysp.top/img/swiper/{{index + 1}}.jpg" mode='aspectFill'></image>
-  </swiper-item>
-</swiper> -->
-<view>
-<view class="cu-bar bg-white search fixed" style="background-color:var(--white);margin-top:80px">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text>
-    <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
-  </view>
-</view>
-</view>
-<!-- <view  style='hight:120px;width:100%'>
-<image src="http://www.gysp.top/img/swiper/guqin.jpg" style='hight:2%;width:100%'></image>
-</view> -->
-
-<view style='margin-top:65px'>
-
-<scroll-view scroll-x class="bg-white nav">
-  <view class="flex text-center">
-    <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}} {{liDaiQinPuStatus=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{1}}" style="color:{{liDaiQinPuStatus=='1'?'#39b54a':'#CCCCCC'}}">
-    历代琴谱
-    </view>
-        <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}} {{qinquStatus=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{2}}" style="color:{{qinquStatus=='1'?'#39b54a':'#CCCCCC'}}">
-      琴曲
-    </view>
-        <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}} {{1=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{3}}" style="color:{{0=='1'?'#39b54a':'#CCCCCC'}}">
-      琴声
+  <view>
+    <view class="cu-bar bg-white search" style="background-color:var(--white);margin-top:1%">
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
+      </view>
     </view>
   </view>
-</scroll-view>
-</view>
-<view style="display: flex;justify-content: center">
-<image src="http://www.gysp.top/img?path=swiper/guqin.jpg"  mode='aspectFit'></image>
-</view>
-
+  <view style='margin-top:1%'>
+    <scroll-view scroll-x class="bg-white nav">
+      <view class="flex text-center">
+        <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}} {{1=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{1}}" style="color:{{liDaiQinPuStatus=='1'?'#39b54a':'#000000'}}">
+          历代琴谱
+        </view>
+        <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}} {{1=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{2}}" style="color:{{qinquStatus=='1'?'#39b54a':'#000000'}}">
+          琴曲
+        </view>
+        <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}} {{0=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{3}}" style="color:{{0=='1'?'#39b54a':'#000000'}}">
+          琴声
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view style="display: flex;justify-content: center;margin-top:5%">
+    <image style="width:60%" src="http://www.gysp.top/img?path=swiper/index.jpg&scale=0.6&quality=0.5" mode='aspectFit'></image>
+  </view>
 </scroll-view>

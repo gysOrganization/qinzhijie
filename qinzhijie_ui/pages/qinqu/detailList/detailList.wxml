@@ -10,23 +10,20 @@
     </navigator>
   </view>
 </view>
-<!-- <view class='search'>
-  <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
-  <image class="" src='http://www.gysp.top:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
-</view> -->
-<view class="cu-bar bg-white search fixed" style="top:44px;background-color:var(--white);">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text>
-    <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
+<view>
+  <view class="cu-bar bg-white search" style="width:100%;background-color:var(--white);margin-top:1%">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
+    </view>
   </view>
 </view>
-<view style='height: 60px'></view>
-<view class="VerticalBox">
+<view class="VerticalBox" style="margin-top:3%;">
   <view></view>
-  <block wx:for='{{bookDetailList}}'>
+  <block wx:for='{{bookDetailList}}' wx:key="key">
     <!-- data-*属性在触发事件时获取  -->
     <view bindtap='showPicList' data-id='{{item.id}}' class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" style='margin: 1px 0 0 0'>
       <view class="cu-item arrow">
@@ -36,11 +33,10 @@
         </view>
       </view>
     </view>
-
   </block>
 </view>
 <view>
-  <block wx:for='{{queryList}}'>
+  <block wx:for='{{queryList}}' wx:key="key">
     <!-- data-*属性在触发事件时获取  -->
     <view class='cu-item arrow' hover-class='item-press' bindtap='' data-id='{{item.id}}' style='margin-top:10px;'>
       <view>
@@ -55,12 +51,6 @@
                 </view>
               </view>
             </view>
-            <!-- <view class='singleTrade' hover-class='item-press'>
-              <view>
-                <view class='name' style='color: black' bindtap='showPicList' data-id='{{item.id}}'>
-                  <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;</text>{{item.partName}}</view>
-              </view>
-            </view> -->
           </block>
         </view>
       </view>

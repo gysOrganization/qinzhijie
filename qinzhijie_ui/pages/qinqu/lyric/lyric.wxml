@@ -10,11 +10,7 @@
     </navigator>
   </view>
 </view>
-<!-- <view class='search'>
-  <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
-  <image class="" src='http://www.gysp.top:8082/qinzhijie/images/search/search.PNG' bindtap='query'></image>
-</view> -->
-<view class="cu-bar bg-white search fixed" style="top:44px;background-color:var(--white);">
+<view class="cu-bar bg-white search" style="width:100%;margin-top:1%;background-color:var(--white);">
   <view class="search-form round">
     <text class="cuIcon-search"></text>
     <input type="text" placeholder="输入你想要的内容" confirm-type="search" value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
@@ -23,9 +19,7 @@
     <button class="cu-btn bg-gradual-green shadow-blur round" bindtap='query'>搜索</button>
   </view>
 </view>
-<view style='height: 60px'></view>
-<view class="VerticalBox">
-  <view></view>
+<view class="VerticalBox" style="margin-top:3%;">
   <block wx:for='{{lyricList}}'  wx:key id="main-{{index}}">
     <!-- data-*属性在触发事件时获取  -->
     <view bindtap='showLyricDetail' data-id='{{item.id}}' class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" style='margin: 1px 0 0 0'>

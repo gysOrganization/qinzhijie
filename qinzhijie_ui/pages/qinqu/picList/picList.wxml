@@ -11,7 +11,7 @@
   </view>
 </view>
 <view class="schoollist">
-  <block wx:for="{{picList}}">
+  <block wx:for="{{picList}}" wx:key="key">
     <view class="school-list">
       <view>
         <view class="school-list-info" catchtap='showPic' data-str="{{item}}" data-index="{{index}}">
