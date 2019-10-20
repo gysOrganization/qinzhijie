@@ -1,0 +1,118 @@
+.audio-player{
+  width: 750rpx;
+  height: 80rpx;
+  overflow: hidden;
+  position: fixed;
+  color: #fff;
+  bottom:30rpx; 
+}
+.audio-img,.audio-img image{
+  width: 100%;
+  height: 100%;
+}
+.audio-controller{
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  background: rgba(0, 0, 0, .4);
+  font-size: 9pt;
+  text-align: center;
+}
+.flex-col-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.audio-controller image{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.audio-button{
+  width: 60rpx;
+}
+.audio-slider{
+  width: 520rpx;
+}
+.audio-time{
+  width: 170rpx;
+}
+
+.item {
+  width: 100%;
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item text {
+  font-size: medium;
+}
+
+.audio_progress {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.audio_progress slider {
+  width: 80%;
+}
+
+.audio_progress view {
+  padding: 18rpx;
+}
+
+.audio_post {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 50rpx auto;
+  border-radius: 50%;
+}
+
+/* 旋转的样式 */
+
+.music_on {
+  animation: audio-rotate 8s linear infinite;
+}
+
+.audio_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.audio_control button {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+/* 旋转动画 */
+
+@keyframes audio-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.empty_tip{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url(http://www.gysp.top/img?path=system/background_music.jpg&scale=0.5) no-repeat;
+ background-size: cover;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  /* justify-content: center;水平居中 */
+}

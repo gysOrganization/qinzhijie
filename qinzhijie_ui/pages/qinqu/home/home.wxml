@@ -24,7 +24,7 @@
         <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}} {{1=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{2}}" style="color:{{qinquStatus=='1'?'#39b54a':'#000000'}}">
           琴曲
         </view>
-        <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}} {{0=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{3}}" style="color:{{0=='1'?'#39b54a':'#000000'}}">
+        <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}} {{1=='1'?'chose':'other'}}" bindtap="tabSelect" data-id="{{3}}" style="color:{{0=='1'?'#39b54a':'#000000'}}">
           琴声
         </view>
       </view>

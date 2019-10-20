@@ -23,7 +23,7 @@ Component({
     }
 
     wx.showLoading({
-      title: '数据加载中',
+      title: '数据加载中...',
       mask: true,
     })
     let i = 0;
@@ -59,34 +59,11 @@ Component({
       }
       return e
     },
-    CopyLink(e) {
-      wx.setClipboardData({
-        data: e.currentTarget.dataset.link,
-        success: res => {
-          wx.showToast({
-            title: '已复制',
-            duration: 1000,
-          })
-        }
-      })
-    },
-    showModal(e) {
-      this.setData({
-        modalName: e.currentTarget.dataset.target
-      })
-    },
-    hideModal(e) {
-      this.setData({
-        modalName: null
-      })
-    },
-    showQrcode() {
-      wx.previewImage({
-        urls: ['https://image.weilanwl.com/color2.0/zanCode.jpg'],
-        current: 'https://image.weilanwl.com/color2.0/zanCode.jpg' // 当前显示图片的http链接      
-      })
-    },
     loginIn(){
+      wx.showLoading({
+        title: '数据加载中...',
+        mask: true,
+      })
       wx.getSetting({
       success: res => {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
@@ -99,6 +76,10 @@ Component({
     })
     },
     checkUserInfo(){
+      wx.showLoading({
+        title: '数据加载中...',
+        mask: true,
+      })
       wx.getSetting({
         success: res => {
           //查看userinfo的全局变量是否为空，如果为空且已经授权，就再去取一次userinfo
@@ -114,6 +95,7 @@ Component({
           }
         }
       })
+      wx.hideLoading();
     }
   }
 })

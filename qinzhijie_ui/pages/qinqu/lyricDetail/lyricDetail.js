@@ -17,6 +17,10 @@ Page({
     })
   },
   onLoad: function (event) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var that = this
     wx.request({
       url: 'https://www.gysp.top/bookLyric/getList',
@@ -35,6 +39,7 @@ Page({
             lyricList: []
           })
         }
+        wx.hideLoading();
       }
     }) 
   },

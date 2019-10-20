@@ -11,6 +11,10 @@ Page({
   },
 
   onLoad: function (event) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var that = this
     that.setData({
       inputValue: event.queryStr
@@ -31,8 +35,9 @@ Page({
             lyricList: res.data.data.dataList
           })
         }
+        wx.hideLoading();
       }
-    })  
+    })
   },
   //搜索框文本内容显示
   inputBind: function (event) {
@@ -41,6 +46,10 @@ Page({
     })
   },
   query: function (event) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var that = this
     wx.request({
       url: 'https://www.gysp.top/station/search',
@@ -58,6 +67,7 @@ Page({
             lyricList: res.data.data.lyricList
           })
         }
+        wx.hideLoading();
       }
     })
   },

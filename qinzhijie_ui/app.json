@@ -40,7 +40,10 @@
     "pages/about/test/list",
     "pages/about/test/filter",
     "pages/about/home/home",
-    "pages/plugin/verticalnav/verticalnav"
+    "pages/plugin/verticalnav/verticalnav",
+    "pages/qinqu/music01/music",
+    "pages/qinqu/music/music"
+
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

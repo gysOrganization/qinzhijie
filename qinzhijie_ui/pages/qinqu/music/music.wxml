@@ -1,0 +1,42 @@
+<view class='cu-custom'>
+  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
+    <view slot="content">
+      琴之界
+    </view>
+  </cu-custom>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text> 返回
+    </navigator>
+  </view>
+</view>
+<view class="empty_tip">
+  <view class='item'>
+    <image class='audio_post{{music_on?" music_on":""}}' style="animation-play-state:{{music_on?'running':'paused'}}" src='http://www.gysp.top/img?path=system/xuanzhuan.jpeg&scale=0.5'></image>
+  </view>
+   <text class="text-black text-bold">琴曲名：小秘密</text>
+<view class="solid-bottom text-df padding">作者：不详</view>
+
+
+  <view class="audio-player">
+    <view class="audio-controller">
+      <view class="flex-col-center audio-button" bindtap="playAudio">
+        <!-- 播放暂停 -->
+        <block wx:if='{{backgroundAudio.isPlaying}}'>
+          <image src='images/pause.png' />
+        </block>
+        <block wx:else>
+          <image src='images/play.png' />
+        </block>
+      </view>
+      <!-- 进度条 -->
+      <view class="flex-col-center audio-slider">
+        <slider bindchange='dragAudioSlider' activeColor='red' block-size="12" value='{{backgroundAudio.progress}}'></slider>
+      </view>
+      <!-- 显示时间 -->
+      <view class="flex-col-center audio-time">
+        {{backgroundAudio.currentDurationTime||'00:00'}}/{{backgroundAudio.durationTime||'00:00'}}
+      </view>
+    </view>
+  </view>
+</view>

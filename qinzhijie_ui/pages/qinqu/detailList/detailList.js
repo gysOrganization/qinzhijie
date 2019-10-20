@@ -12,6 +12,10 @@ Page({
   },
 
   onLoad: function (event) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var that = this
     wx.request({
       url: 'https://www.gysp.top/bookDetail/getList',
@@ -30,6 +34,7 @@ Page({
             queryList: []
           })
         }
+        wx.hideLoading();
       }
     })  
   },
@@ -47,6 +52,10 @@ Page({
 
   },
   query: function (event) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var that = this
     wx.request({
       url: 'https://www.gysp.top/bookDetail/getListSpec',
@@ -72,10 +81,15 @@ Page({
             queryList: []
           })
         }
+        wx.hideLoading();
       }
     }) 
   },
   showBookDetail(e) {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     var id = e.currentTarget.dataset.id
     var that = this
     wx.request({
@@ -95,6 +109,7 @@ Page({
             queryList: []
           })
         }
+        wx.hideLoading();
       }
     })  
   },

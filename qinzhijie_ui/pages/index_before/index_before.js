@@ -16,6 +16,10 @@ Page({
   },
 
   bindGetUserInfo: function(e) {
+    wx.showLoading({
+      title: '数据加载中...',
+      mask: true,
+    })
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
       var that = this;
@@ -26,6 +30,10 @@ Page({
       // 发送 res.code 到后台换取 openId
       wx.login({
         success: res => {
+          wx.showLoading({
+            title: '数据加载中...',
+            mask: true,
+          })
           wx.request({
             url: 'https://www.gysp.top/login/getOpenId',
             method: 'POST',

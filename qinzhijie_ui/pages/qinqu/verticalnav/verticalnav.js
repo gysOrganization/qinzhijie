@@ -35,11 +35,9 @@ Page({
             bookList: res.data.data.dataList
           })
         }
+        wx.hideLoading();
       }
     });
-  },
-  onReady() {
-    wx.hideLoading()
   },
   //搜索框文本内容显示
   inputBind: function (event) {
@@ -69,9 +67,9 @@ Page({
             bookList: res.data.data.bookList
           })
         }
+        wx.hideLoading()
       }
     })
-    wx.hideLoading()
   },
   showBookDetail(e) {
     var id = e.currentTarget.dataset.id
