@@ -8,7 +8,6 @@
     "pages/qinqu/pic/pic",
     "pages/qinqu/lyric/lyric",
     "pages/qinqu/lyricDetail/lyricDetail",
-    "pages/qinqu/audio/audio",
     "pages/basics/layout/layout",
     "pages/basics/button/button",
     "pages/basics/button/design",
@@ -41,7 +40,7 @@
     "pages/about/test/filter",
     "pages/about/home/home",
     "pages/plugin/verticalnav/verticalnav",
-    "pages/qinqu/music01/music",
+    "pages/qinqu/musicList/musicList",
     "pages/qinqu/music/music"
 
   ],

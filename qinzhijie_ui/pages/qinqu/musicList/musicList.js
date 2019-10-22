@@ -7,39 +7,37 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    bookList: [],
-    load: true
+    lyricList: []
   },
-  onLoad(event) {
+
+  onLoad: function (event) {
     wx.showLoading({
       title: '加载中...',
       mask: true
     });
-    var that = this;
+    var that = this
     that.setData({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/book/getList',
+      url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "9999",
+        pageSize: "200",
         queryObj: {
-          bookName: event.queryStr
+          musicofviolin: event.queryStr
         }
       },
       success: function (res) {
-        if (res.data.data) {
+        if (res.data.data !== null) {
           that.setData({
-            bookList: res.data.data.dataList
+            lyricList: res.data.data.dataList
           })
         }
+        wx.hideLoading();
       }
-    });
-  },
-  onReady() {
-    wx.hideLoading()
+    })
   },
   //搜索框文本内容显示
   inputBind: function (event) {
@@ -66,24 +64,17 @@ Page({
         var searchData = res.data
         if (res.data.data !== null) {
           that.setData({
-            bookList: res.data.data.bookList
+            lyricList: res.data.data.lyricList
           })
         }
+        wx.hideLoading();
       }
     })
-    wx.hideLoading()
   },
-  showBookDetail(e) {
+  showLyricDetail(e) {
     var id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: '/pages/qinqu/music/music?id=' + id
     })
-    // const backgroundAudioManager = wx.getBackgroundAudioManager()
-
-    // backgroundAudioManager.title = '此时此刻'
-    // backgroundAudioManager.epname = '此时此刻'
-    // backgroundAudioManager.singer = '汪峰'
-    // backgroundAudioManager.coverImgUrl = 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
-    // backgroundAudioManager.src = 'http://www.gysp.top/qinzhijieMusic/test.mp3'
   }
 })

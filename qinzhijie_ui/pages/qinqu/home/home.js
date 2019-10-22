@@ -41,7 +41,7 @@ Component({
       } else if (e.currentTarget.dataset.id == 2){
         childUrl = "/lyric/lyric"
       } else if (e.currentTarget.dataset.id == 3){
-        childUrl = "/audio/audio"
+        childUrl = "/musicList/musicList"
       }
 
       wx.navigateTo({
