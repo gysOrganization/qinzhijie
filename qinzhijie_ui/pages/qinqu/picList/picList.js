@@ -17,7 +17,7 @@ Page({
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "9999",
+        pageSize: "500",
         queryObj: {
           id: event.bookDetailId
         }

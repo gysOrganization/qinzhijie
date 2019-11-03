@@ -20,14 +20,23 @@
   </view>
 </view>
 <view class="VerticalBox" style="margin-top:3%;">
-  <block wx:for='{{lyricList}}'  wx:key id="main-{{index}}">
+  <block wx:for='{{musicList}}'  wx:key id="main-{{index}}">
     <!-- data-*属性在触发事件时获取  -->
     <view bindtap='showLyricDetail' data-id='{{item.id}}' class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" style='margin: 1px 0 0 0'>
       <view class="cu-item arrow">
-        <view class="content" hover-class="none">
+        <!-- <view class="content" hover-class="none">
           <text class="cuIcon-formfill text-green"></text>
-          <text class="text-grey">{{item.musicofviolin}}</text>
+          <text class="text-grey">{{item.name}}</text>
+          <text class="text-grey">{{item.musican}}<text>
+        </view> -->
+            <view class="content">
+        <view class="text-trey">
+          <text class="text-cut">{{item.name}}</text>
         </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut"> 专辑：{{item.albumName}}，演奏：{{item.musican}}</text>
+        </view>
+      </view>
       </view>
     </view>
   </block>

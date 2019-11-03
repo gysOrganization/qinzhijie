@@ -20,13 +20,13 @@ Page({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/bookLyric/getList',
+      url: 'https://www.gysp.top/music/getListById',
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "200",
+        pageSize: "1",
         queryObj: {
-          musicofviolin: event.queryStr
+          id: event.id
         }
       },
       success: function(res) {

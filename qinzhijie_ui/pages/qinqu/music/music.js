@@ -1,10 +1,4 @@
 const app = getApp(),myAudio=require("audioManager.js");
-var mockData={//模拟数据
-
-  url:"http://www.gysp.top/qinzhijieMusic/test.mp3",
-  name:'音频播放'
-};
-
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
@@ -13,6 +7,7 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
+    music:{},
     music_on: true, //音乐是不是在播放
     audio:{
       image:'',
@@ -31,34 +26,63 @@ Page({
       isPlaying:false
     },
   },
-  onLoad: function () {
-    this.loadData();
+  onLoad: function (event) {
+    this.loadData(event);
   },
   onShow(){
     myAudio.showAudio(this);//在显示时同步当前歌曲播放进度
+    while (false) {
+      setTimeout(function () {
+        if (resetAudio) {
+          this.setData({
+            music_on: false
+          })
+        }
+      }, 3000);
+    }
   },
-  loadData(){//模拟从服务器获取数据
+  loadData(event){//模拟从服务器获取数据
   var t=this;
   wx.showLoading({
     title: 'loading...',
   })
-    setTimeout(function(){
-      wx.hideLoading();
-      let backgroundAudio = t.data.backgroundAudio;
-      backgroundAudio.name=mockData.name;
-      backgroundAudio.url=mockData.url;
-      backgroundAudio.image=mockData.image;
-      t.setData({
-        backgroundAudio
-      });
-      t.initBackGroundAudio(mockData);
-    },2000);
+    wx.request({
+      url: 'https://www.gysp.top/music/getListById',
+      method: 'POST',
+      header: {
+      },
+      data: {
+        currentPage: "1",
+        pageSize: "300",
+        queryObj: {
+          id: event.id
+        }
+      },
+      success: function (res) {
+        var music = res.data.data.dataList[0];
+        //设置图片是否旋转
+        t.setData({
+          music: res.data.data.dataList[0]
+        })
+        setTimeout(function () {
+          wx.hideLoading();
+          let backgroundAudio = t.data.backgroundAudio;
+          backgroundAudio.name = music.name;
+          backgroundAudio.url = "http://www.music.gysp.top/" +  music.mp3Url;
+          backgroundAudio.image = music.image;
+          t.setData({
+            backgroundAudio
+          });
+          t.initBackGroundAudio(backgroundAudio);
+        }, 2000);
+        wx.hideLoading();
+      }
+    })
   },
   initBackGroundAudio(e){
     let audio={//设置播放器属性，src与title为必填
       src:e.url,
       title:e.name,
-      coverImgUrl:e.image
     };
     myAudio.init(audio, this);//初始化audio
     myAudio.getDuration(audio,this);//获取视频长度
@@ -66,7 +90,6 @@ Page({
     this.playAudio()//加载完毕就开始播放
   },
   playAudio(){//播放与暂停
-    console.log(this.data.backgroundAudio.isPlaying);
     if (this.data.backgroundAudio.isPlaying){
       myAudio.pause(this);
     }else{

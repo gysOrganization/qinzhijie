@@ -7,7 +7,7 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    lyricList: []
+    musicList: []
   },
 
   onLoad: function (event) {
@@ -20,19 +20,19 @@ Page({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/bookLyric/getList',
+      url: 'https://www.gysp.top/music/getList',
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "200",
+        pageSize: "300",
         queryObj: {
-          musicofviolin: event.queryStr
+          name: event.queryStr
         }
       },
       success: function (res) {
         if (res.data.data !== null) {
           that.setData({
-            lyricList: res.data.data.dataList
+            musicList: res.data.data.dataList
           })
         }
         wx.hideLoading();
@@ -52,19 +52,22 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/station/search',
+      url: 'https://www.gysp.top/music/getList',
       method: 'POST',
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
       },
       data: {
-        queryStr: this.data.inputValue
+        currentPage: "1",
+        pageSize: "300",
+        queryObj: {
+          name: this.data.inputValue
+        }
       },
       success: function (res) {
         var searchData = res.data
         if (res.data.data !== null) {
           that.setData({
-            lyricList: res.data.data.lyricList
+            musicList: res.data.data.dataList
           })
         }
         wx.hideLoading();

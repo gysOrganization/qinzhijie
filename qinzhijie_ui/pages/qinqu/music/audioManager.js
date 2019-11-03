@@ -9,7 +9,7 @@
 //2.使用时，请按照微信官方文档，在app.json中配置支持背景播放的以下字段
 //  "requiredBackgroundModes":["audio"]
 
-
+const app = getApp();
 const manager = wx.getBackgroundAudioManager();
 let audioData={
   src:'',
@@ -218,8 +218,8 @@ const setAudio=(e,t)=>{//设置播放器数据
     alert('没有音频地址')
     return;
   }
-  console.log('setAudio的信息');
-  console.log(e);
+  // console.log('setAudio的信息');
+  // console.log(e);
   manager.src=e.src;
   manager.title=e.title;
   manager.startTime=e.startTime;

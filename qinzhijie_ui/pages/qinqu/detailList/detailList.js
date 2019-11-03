@@ -22,7 +22,7 @@ Page({
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "9999",
+        pageSize: "500",
         queryObj: {
           bookId: event.bookId
         }
@@ -62,7 +62,7 @@ Page({
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "9999",
+        pageSize: "500",
         queryObj: {
           partName: this.data.inputValue,
           bookName: this.data.inputValue
@@ -97,7 +97,7 @@ Page({
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "9999",
+        pageSize: "500",
         queryObj: {
           bookId: id
         }
