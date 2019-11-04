@@ -20,11 +20,11 @@ Page({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/music/getListById',
+      url: 'https://www.gysp.top/bookLyric/getList',
       method: 'POST',
       data: {
         currentPage: "1",
-        pageSize: "1",
+        pageSize: "200",
         queryObj: {
           id: event.id
         }

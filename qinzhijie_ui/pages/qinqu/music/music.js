@@ -68,13 +68,13 @@ Page({
           wx.hideLoading();
           let backgroundAudio = t.data.backgroundAudio;
           backgroundAudio.name = music.name;
-          backgroundAudio.url = "http://www.music.gysp.top/" +  music.mp3Url;
-          backgroundAudio.image = music.image;
+          backgroundAudio.url = encodeURI("http://www.music.gysp.top/" +  music.mp3Url);
+          //backgroundAudio.image = "";
           t.setData({
             backgroundAudio
           });
           t.initBackGroundAudio(backgroundAudio);
-        }, 2000);
+        },2000);
         wx.hideLoading();
       }
     })
@@ -103,7 +103,7 @@ Page({
   dragAudioSlider(e){//拖动进度条
     myAudio.seek({
       progress:e.detail.value
-    },this)//跳转到该进度
+    },this);//跳转到该进度
     myAudio.play(this);//播放
   },
   onUnload(){

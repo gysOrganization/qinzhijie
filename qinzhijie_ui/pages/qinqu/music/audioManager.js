@@ -105,6 +105,9 @@ const getDuration=(e,t)=>{
 }
 
 const seek=(e,t)=>{//跳转到该进度播放
+  wx.showLoading({
+    title: 'loading...',
+  })
   if (!(e.currentTime || e.progress || e.currentTime == 0 || e.progress == 0)) {
     console.log('没有参数，无法跳转');
     return;
@@ -127,6 +130,7 @@ const seek=(e,t)=>{//跳转到该进度播放
       pause(t);
     }
   }
+  wx.hideLoading();
 }
 
 const changeAudioProgressBar=(e,t)=>{
@@ -159,7 +163,6 @@ const changeAudioProgressBar=(e,t)=>{
   t.setData({backgroundAudio})
   return backgroundAudio;
 }
-
 
 const play=(t)=>{//播放
   if (resetAudio){
