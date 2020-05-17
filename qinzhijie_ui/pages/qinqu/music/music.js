@@ -47,7 +47,7 @@ Page({
     title: 'loading...',
   })
     wx.request({
-      url: 'https://www.gysp.top/music/getListById',
+      url: 'https://www.qinzhijie.gysp.top/music/getListById',
       method: 'POST',
       header: {
       },

@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="scrollPage">
-  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.img.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
@@ -31,6 +31,6 @@
     </scroll-view>
   </view>
   <view style="display: flex;justify-content: center;margin-top:5%">
-    <image style="width:80%" src="http://www.gysp.top/img?path=swiper/index.jpg&scale=0.6&quality=0.5" mode='aspectFit'></image>
+    <image style="width:80%" src="http://www.img.gysp.top/img?path=swiper/index.jpg&scale=0.6&quality=0.5" mode='aspectFit'></image>
   </view>
 </scroll-view>

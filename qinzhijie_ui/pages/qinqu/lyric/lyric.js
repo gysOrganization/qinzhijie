@@ -20,7 +20,7 @@ Page({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/bookLyric/getList',
+      url: 'https://www.qinzhijie.gysp.top/bookLyric/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -52,7 +52,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/station/search',
+      url: 'https://www.qinzhijie.gysp.top/station/search',
       method: 'POST',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"

@@ -13,7 +13,7 @@ Page({
   onLoad: function(event) {
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/bookDetail/getPicList',
+      url: 'https://www.qinzhijie.gysp.top/bookDetail/getPicList',
       method: 'POST',
       data: {
         currentPage: "1",

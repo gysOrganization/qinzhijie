@@ -1,5 +1,5 @@
 <view class='cu-custom'>
-  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.img.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
@@ -29,7 +29,7 @@
       <view class="cu-list menu-avatar" bindtap='showBookDetail' data-id='{{item.id}}'>
         <view class="cu-item" style="height: 160rpx">
           <view class="cu-avatar round lg" style="width: 110rpx;">
-            <image src="http://www.gysp.top/img?path={{item.coverPic}}&scale=0.2&quality=0.1" mode='aspectFit'></image>
+            <image src="http://www.img.gysp.top/img?path={{item.coverPic}}&scale=0.2&quality=0.1" mode='aspectFit'></image>
           </view>
           <view class="content">
             <view class="text-grey">作者:{{item.author}}</view>

@@ -35,7 +35,7 @@ Page({
             mask: true,
           })
           wx.request({
-            url: 'https://www.gysp.top/login/getOpenId',
+            url: 'https://www.qinzhijie.gysp.top/login/getOpenId',
             method: 'POST',
             header: {
               "Content-Type": "application/x-www-form-urlencoded"
@@ -47,7 +47,7 @@ Page({
               //如果获得openid 就调用接口，向后台调用登陆接口
               //通过接口向后台写如数据
               wx.request({
-                url: 'https://www.gysp.top/login/loginIn',
+                url: 'https://www.qinzhijie.gysp.top/login/loginIn',
                 method: 'POST',
                 header: {
                   "Content-Type": "application/x-www-form-urlencoded"

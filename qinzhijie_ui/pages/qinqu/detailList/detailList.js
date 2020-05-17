@@ -18,7 +18,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/bookDetail/getList',
+      url: 'https://www.qinzhijie.gysp.top/bookDetail/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -58,7 +58,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/bookDetail/getListSpec',
+      url: 'https://www.qinzhijie.gysp.top/bookDetail/getListSpec',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -93,7 +93,7 @@ Page({
     var id = e.currentTarget.dataset.id
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/bookDetail/getList',
+      url: 'https://www.qinzhijie.gysp.top/bookDetail/getList',
       method: 'POST',
       data: {
         currentPage: "1",

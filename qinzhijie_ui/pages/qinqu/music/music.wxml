@@ -1,5 +1,5 @@
 <view class='cu-custom'>
-  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.img.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
@@ -12,7 +12,7 @@
 </view>
 <view class="empty_tip">
   <view class='item'>
-    <image class='audio_post{{music_on?" music_on":""}}' style="animation-play-state:{{music_on?'running':'paused'}}" src='http://www.gysp.top/img?path=system/xuanzhuan.jpeg&scale=0.5'></image>
+    <image class='audio_post{{music_on?" music_on":""}}' style="animation-play-state:{{music_on?'running':'paused'}}" src='http://www.img.gysp.top/img?path=system/xuanzhuan.jpeg&scale=0.5'></image>
   </view>
    <text class="text-black text-bold">琴曲名：{{music.name}}</text>
 <view class="solid-bottom text-df padding">作者：{{music.musican}}</view>

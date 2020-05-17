@@ -1,6 +1,6 @@
 
 .UCenter-bg {
-  background-image: url(http://www.gysp.top/img?path=color2.0/index.jpg&scale=0.5);
+  background-image: url(http://www.img.gysp.top/img?path=color2.0/index.jpg&scale=0.5);
   background-size: cover;
   height: 550rpx;
   display: flex;

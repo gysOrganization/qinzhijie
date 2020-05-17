@@ -1,5 +1,5 @@
 <view class='cu-custom'>
-  <cu-custom bgImage="http://www.gysp.top/img?path=color2.0/plugin/header.jpg">
+  <cu-custom bgImage="http://www.img.gysp.top/img?path=color2.0/plugin/header.jpg">
     <view slot="content">
       琴之界
     </view>
@@ -22,7 +22,7 @@
     <swiper current="{{current}}" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
     <block wx:for='{{picList}}' wx:key="{{index}}">
       <swiper-item>
-        <image src="http://www.gysp.top/img?path={{item}}&scale=0.6&quality=0.7" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+        <image src="http://www.img.gysp.top/img?path={{item}}&scale=0.6&quality=0.7" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
       </swiper-item>
       </block>
     </swiper>

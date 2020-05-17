@@ -20,7 +20,7 @@ Page({
       inputValue: event.queryStr
     })
     wx.request({
-      url: 'https://www.gysp.top/music/getList',
+      url: 'https://www.qinzhijie.gysp.top/music/getList',
       method: 'POST',
       data: {
         currentPage: "1",
@@ -52,7 +52,7 @@ Page({
     });
     var that = this
     wx.request({
-      url: 'https://www.gysp.top/music/getList',
+      url: 'https://www.qinzhijie.gysp.top/music/getList',
       method: 'POST',
       header: {
       },
